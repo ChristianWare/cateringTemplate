@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.copy {
+  font-weight: 700;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.btnContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .btnContainer {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .btnContainer {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

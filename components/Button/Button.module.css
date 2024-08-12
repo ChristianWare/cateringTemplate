@@ -1,0 +1,93 @@
+.container {
+  position: relative;
+  z-index: 1;
+}
+
+.btn {
+  text-align: center;
+  font-size: 2.3rem;
+  font-family: var(--staatliches);
+  white-space: nowrap;
+  border-radius: 50px;
+  user-select: none;
+  transition: all 0.1s ease-in;
+  display: inline-block;
+  padding: 8px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  line-height: 1;
+}
+
+.primary {
+  color: var(--black);
+  background-color: var(--green);
+  border: 2px solid var(--green);
+}
+
+.primary:hover {
+  background-color: transparent;
+  color: var(--green);
+}
+
+.primaryii {
+  color: var(--green);
+  background-color: transparent;
+  border: 2px solid var(--green);
+}
+
+.primaryii:hover {
+  background-color: var(--green);
+  color: var(--black);
+}
+
+.primaryiii {
+  color: var(--olive);
+  background-color: var(--green);
+  border: 2px solid var(--olive);
+}
+
+.primaryiv {
+  color: var(--olive);
+  background-color: transparent;
+  border: 2px solid var(--olive);
+}
+
+.secondary {
+  color: var(--black);
+  background-color: var(--green);
+  border: 1px solid var(--border2);
+}
+
+.tertiary {
+  color: var(--black);
+  background-color: var(--green);
+  border: 1px solid var(--border2);
+}
+
+.tertiaryii {
+  color: var(--black);
+  background-color: transparent;
+  border: 1px solid var(--black);
+}
+
+.navBtn {
+  padding: 5px 25px;
+  font-weight: 600;
+  color: var(--black);
+  background-color: var(--green);
+  border: 1px solid var(--olive);
+  font-size: 2.1rem;
+}
+
+.navBtnii {
+  padding: 5px 25px;
+  font-weight: 600;
+  color: var(--black);
+  font-size: 1.4rem;
+  border: 1px solid var(--border2);
+}
