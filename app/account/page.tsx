@@ -1,10 +1,9 @@
 "use client";
 
 import ContentPadding from "../../components/ContentPadding/ContentPadding";
-import LayoutWrapper from "../../components/LayoutWrapper/LayoutWrapper";
+import LayoutWrapper from "../../components/LayoutWrapper";
 import { useAppSelector } from "../../redux/hooks";
 import Link from "next/link";
-import FinalCTA1 from "../../components/FinalCTA1/FinalCTA1";
 import Button from "../../components/Button/Button";
 import styles from "./AccountPage.module.css";
 
@@ -68,7 +67,6 @@ const AccountPage = () => {
           )}
         </ContentPadding>
       </LayoutWrapper>
-      <FinalCTA1 />
     </>
   );
 };

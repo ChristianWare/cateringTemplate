@@ -5,7 +5,6 @@ import Discover from "../components/Discover/Discover";
 import Properties from "../components/Properties/Properties";
 import Owner from "../components/Owner/Owner";
 import Faqs from "../components/Faqs/Faqs";
-import FinalCTA1 from "../components/FinalCTA1/FinalCTA1";
 import Error from "./error";
 import BlogSection from "../components/BlogSection/BlogSection";
 import { revalidatePath } from "next/cache";
@@ -70,7 +69,6 @@ export default async function Home() {
       />
       <Testimonials />
       <BlogSection blogData={blogs} />
-      <FinalCTA1 />
       <ContactArea /> */}
     </div>
   );

@@ -38,6 +38,7 @@
 
 .activeLink {
   color: var(--green);
+  text-decoration: underline;
 }
 
 .hamburger {
@@ -170,6 +171,7 @@
     padding-right: 35px;
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
+    text-decoration: underline;
   }
 
   .icon {

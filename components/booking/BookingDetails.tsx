@@ -4,10 +4,9 @@ import { IBooking } from "../../backend/models/booking";
 import { useAppSelector } from "../../redux/hooks";
 import Image from "next/image";
 import styles from "./BookingDetails.module.css";
-import LayoutWrapper from "../LayoutWrapper/LayoutWrapper";
+import LayoutWrapper from "../LayoutWrapper";
 import ContentPadding from "../ContentPadding/ContentPadding";
 import Button from "../Button/Button";
-import FinalCTA1 from "../FinalCTA1/FinalCTA1";
 
 interface Props {
   data: {
@@ -178,7 +177,6 @@ const BookingDetails = ({ data }: Props) => {
           <hr />
         </ContentPadding>
       </LayoutWrapper>
-      <FinalCTA1 />
     </>
   );
 };

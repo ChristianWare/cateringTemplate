@@ -1,9 +1,9 @@
 "use client";
 
 import ContentPadding from "../ContentPadding/ContentPadding";
-import LayoutWrapper from "../LayoutWrapper/LayoutWrapper";
+import LayoutWrapper from "../LayoutWrapper";
 import styles from "./RoomDetails.module.css";
-import FinalCTA1 from "../FinalCTA1/FinalCTA1";
+
 import mapboxgl from "mapbox-gl/dist/mapbox-gl.js";
 import { IRoom } from "../../backend/models/room";
 import BookingDatePicker from "../BookingDatePicker/BookingDatePicker";
@@ -96,13 +96,12 @@ const RoomDetails = ({ data }: Props) => {
             ></iframe>
           </div>
           <ListReviews reviews={room?.reviews} />
-          <NewReview roomId={room?._id} />
+          {/* <NewReview roomId={room?._id} /> */}
           <br />
           <br />
         </ContentPadding>
       </LayoutWrapper>
       <Discover />
-      <FinalCTA1 />
     </>
   );
 };

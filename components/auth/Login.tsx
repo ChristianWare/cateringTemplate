@@ -7,10 +7,9 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import toast from "react-hot-toast";
 import styles from "./Login.module.css";
-import LayoutWrapper from "../LayoutWrapper/LayoutWrapper";
+import LayoutWrapper from "../LayoutWrapper";
 import ContentPadding from "../ContentPadding/ContentPadding";
 import FalseButton from "../FalseButton/FalseButton";
-import FinalCTA1 from "../FinalCTA1/FinalCTA1";
 import Button from "../Button/Button";
 import Visibility from "../../public/icons/visibility.svg";
 
@@ -119,7 +118,6 @@ const Login = () => {
           </form>
         </ContentPadding>
       </LayoutWrapper>
-      <FinalCTA1 />
     </>
   );
 };

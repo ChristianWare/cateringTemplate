@@ -1,19 +1,17 @@
-import ContactSection from "../../components/ContactSection/ContactSection";
-import Faqs from "../../components/Faqs/Faqs";
-import FinalCTA1 from "../../components/FinalCTA1/FinalCTA1";
-import PageIntro from "../../components/PageIntro/PageIntro";
+import BlogSection from "../../components/BlogSection/BlogSection";
+import ContactHero from "../../components/ContactHero/ContactHero";
+import ContactInfo from "../../components/ContactInfo/ContactInfo";
+import Faq from "../../components/Faq/Faq";
+import Usp from "../../components/Usp/Usp";
 
-const contact = () => {
+export default function ContactPage() {
   return (
-    <>
-      <PageIntro
-        heading='STAY IN TOUCH'
-        copy='We look forward to spesking with you soon. Feel free to reach out to us anytime.'
-      />
-      <ContactSection />
-      <Faqs />
-      <FinalCTA1 />
-    </>
+    <main>
+      <ContactHero />
+      <ContactInfo />
+      <Faq />
+      <Usp />
+      <BlogSection />
+    </main>
   );
-};
-export default contact;
+}

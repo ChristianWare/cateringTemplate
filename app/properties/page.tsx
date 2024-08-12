@@ -1,5 +1,4 @@
 import Faqs from "../../components/Faqs/Faqs";
-import FinalCTA1 from "../../components/FinalCTA1/FinalCTA1";
 import PageIntro from "../../components/PageIntro/PageIntro";
 import Error from "../error";
 import Properties from "../../components/Properties/Properties";
@@ -39,7 +38,6 @@ export default async function PropertiesPage() {
       <Amenitiesii />
       <Amenities />
       <Faqs />
-      <FinalCTA1 />
     </>
   );
 }

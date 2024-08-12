@@ -1,6 +1,5 @@
 import ContentPadding from "../../components/ContentPadding/ContentPadding";
-import FinalCTA1 from "../../components/FinalCTA1/FinalCTA1";
-import LayoutWrapper from "../../components/LayoutWrapper/LayoutWrapper";
+import LayoutWrapper from "../../components/LayoutWrapper";
 import AdminSidebar from "../../components/layout/AdminSidebar";
 import { ReactNode } from "react";
 import styles from "./AdminLayoutStyles.module.css";
@@ -22,7 +21,6 @@ const AdminLayout = ({ children }: Props) => {
           </div>
           <div className={styles.right}>{children}</div>
         </div>
-        <FinalCTA1 />
       </ContentPadding>
     </LayoutWrapper>
   );

@@ -1,21 +1,25 @@
-import Faqs from "../../components/Faqs/Faqs";
-import FinalCTA1 from "../../components/FinalCTA1/FinalCTA1";
-import Methodology from "../../components/Methodology/Methodology";
-import Owner from "../../components/Owner/Owner";
-import PageIntro from "../../components/PageIntro/PageIntro";
+import AboutHero from "../../components/AboutHero/AboutHero";
+import AboutSection from "../../components/AboutSection/AboutSection";
+import BlogSection from "../../components/BlogSection/BlogSection";
+import Faq from "../../components/Faq/Faq";
+import Galleryii from "../../components/Galleryii/Galleryii";
+import NewsLetter from "../../components/NewsLetter/NewsLetter";
+import OurMission from "../../components/OurMission/OurMission";
+import OurStory from "../../components/OurStory/OurStory";
+import Testimonials from "../../components/Testimonials/Testimonials";
 
-const about = () => {
+export default function AboutPage() {
   return (
-    <>
-          <PageIntro
-            heading='About the company'
-            copy='Embodying sustainable practices for the future'
-          />
-      <Owner reverse='reverse' />
-      <Methodology />
-      <Faqs />
-      <FinalCTA1 />
-    </>
+    <main>
+      <AboutHero />
+      <AboutSection />
+      <OurStory />
+      <OurMission />
+      <Galleryii />
+      <Testimonials />
+      <Faq />
+      <BlogSection />
+      <NewsLetter />
+    </main>
   );
-};
-export default about;
+}
