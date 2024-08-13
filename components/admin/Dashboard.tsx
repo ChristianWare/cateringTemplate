@@ -42,7 +42,7 @@ const Dashboard = () => {
   if (!data) return <Loading />;
 
   return (
-    <div>
+    <section className={styles.parent}>
       <div className={styles.dates}>
         <div className={styles.dateContainer}>
           <label htmlFor=''>Start Date</label>
@@ -89,7 +89,7 @@ const Dashboard = () => {
           <TopPerformingChart />
         </div> */}
       </div>
-    </div>
+    </section>
   );
 };
 export default Dashboard;

@@ -3,6 +3,7 @@ import LayoutWrapper from "../../components/LayoutWrapper";
 import AdminSidebar from "../../components/layout/AdminSidebar";
 import { ReactNode } from "react";
 import styles from "./AdminLayoutStyles.module.css";
+import Nav from "../../components/Nav/Nav";
 
 interface Props {
   children: ReactNode;
@@ -10,19 +11,18 @@ interface Props {
 
 const AdminLayout = ({ children }: Props) => {
   return (
-    <LayoutWrapper>
-      <ContentPadding>
-        <div>
+    <div className={styles.parent}>
+      <Nav color='olive' barColor='oliveBar' />
+      <LayoutWrapper>
           <h1 className={styles.heading}>Admin Dashboard</h1>
-        </div>
-        <div className={styles.content}>
-          <div className={styles.left}>
-            <AdminSidebar />
+          <div className={styles.content}>
+            <div className={styles.left}>
+              <AdminSidebar />
+            </div>
+            <div className={styles.right}>{children}</div>
           </div>
-          <div className={styles.right}>{children}</div>
-        </div>
-      </ContentPadding>
-    </LayoutWrapper>
+      </LayoutWrapper>
+    </div>
   );
 };
 

@@ -12,6 +12,7 @@ import ContentPadding from "../ContentPadding/ContentPadding";
 import FalseButton from "../FalseButton/FalseButton";
 import Button from "../Button/Button";
 import Visibility from "../../public/icons/visibility.svg";
+import Nav from "../Nav/Nav";
 
 
 const Login = () => {
@@ -53,7 +54,9 @@ const Login = () => {
   };
 
   return (
-    <>
+    <section className={styles.parent}>
+      {/* <Nav color='olive' barColor='oliveBar' /> */}
+
       <LayoutWrapper>
         <ContentPadding>
           <h1 className={styles.heading}>Login</h1>
@@ -132,7 +135,7 @@ const Login = () => {
           </form>
         </ContentPadding>
       </LayoutWrapper>
-    </>
+    </section>
   );
 };
 export default Login;

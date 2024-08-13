@@ -1,4 +1,5 @@
 import Dashboard from "../../../components/admin/Dashboard";
+import styles from './Dashboard.module.css'
 
 export const metadata = {
   title: "Dashboard - Admin || BookIT",
@@ -9,9 +10,9 @@ const DashboardPage = async () => {
 
 
   return (
-    <>
+    <main className={styles.parent}>
       <Dashboard />
-    </>
+    </main>
   );
 };
 export default DashboardPage;

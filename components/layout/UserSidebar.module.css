@@ -1,18 +1,30 @@
 .container {
-  display: flex;
+  /* display: flex;
   width: 100%;
   align-items: flex-start;
-  justify-content: space-between;
-  gap: 1rem;
-  background-color: var(--purple2);
+  justify-content: flex-start;
+  gap: 1rem; */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1rem;
+  background-color: var(--olive);
   padding: 2rem;
   border-radius: 10px;
   margin-bottom: 5rem;
+  width: 100%;
+}
+
+.icon {
+  color: var(--olive);
+  width: 2rem;
+  height: 2rem;
+  transition: 0.2s all ease-in;
 }
 
 .btn,
 .active {
-  background-color: var(--white);
+  background-color: var(--bgColor);
+  color: var(--olive);
   padding: 1.5rem;
   border-radius: 5px;
   line-height: 100%;
@@ -23,16 +35,32 @@
   gap: 1rem;
   width: 100%;
   transition: all 0.2s ease;
+  border: 2px solid var(--bgColor);
+  transition: 0.2s all ease-in;
+  font-size: 2rem;
 }
 
 .btn:hover {
-  background-color: var(--purple);
+  background-color: var(--olive);
   color: var(--white);
+  transition: 0.2s all ease-in;
 }
 
 .active {
-  background-color: var(--purple);
-  color: var(--white);
+  background-color: var(--olive);
+  color: var(--bgColor);
+  transition: 0.2s all ease-in;
+}
+
+.active .icon,
+.btn:hover .icon {
+  color: var(--bgColor);
+}
+
+@media screen and (max-width: 1068px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media screen and (max-width: 900px) {
@@ -53,8 +81,6 @@
 
 @media screen and (max-width: 568px) {
   .container {
-    flex-direction: column;
-    flex-wrap: nowrap;
-    width: 100%;
+    grid-template-columns: repeat(1, 1fr);
   }
 }

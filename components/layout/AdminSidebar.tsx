@@ -4,6 +4,10 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import styles from "./UserSidebar.module.css";
+import Dashboard from "../../public/icons/dashboard.svg";
+import Menu from "../../public/icons/menu.svg";
+import Envelope from "../../public/icons/envelope.svg";
+import User from "../../public/icons/user.svg";
 
 const AdminSidebar = () => {
   const pathname = usePathname();
@@ -12,28 +16,28 @@ const AdminSidebar = () => {
     {
       name: "Dashboard",
       url: "/admin/dashboard",
-      icon: "fas fa-tachometer-alt",
+      icon: <Dashboard className={styles.icon} />,
     },
     {
-      name: "Properties",
+      name: "Menu Items",
       url: "/admin/rooms",
-      icon: "fas fa-hotel",
+      icon: <Menu className={styles.icon} />,
     },
     {
-      name: "Bookings",
+      name: "Reservations",
       url: "/admin/bookings",
-      icon: "fas fa-receipt",
+      icon: <Envelope className={styles.icon} />,
     },
     {
       name: "Users",
       url: "/admin/users",
-      icon: "fas fa-user",
+      icon: <User className={styles.icon} />,
     },
-    {
-      name: "Reviews",
-      url: "/admin/reviews",
-      icon: "fas fa-star",
-    },
+    // {
+    //   name: "Reviews",
+    //   url: "/admin/reviews",
+    //   icon: "fas fa-star",
+    // },
   ];
 
   const [activeMenuItem, setActiveMenuItem] = useState(pathname);
@@ -54,7 +58,7 @@ const AdminSidebar = () => {
           onClick={() => handleMenuItemClick(x.url)}
           aria-current={activeMenuItem.includes(x.url) ? "true" : "false"}
         >
-          <i className={`${x.icon} fa-fw pe-2`}></i>
+          {x.icon}
           {x.name}
         </Link>
       ))}

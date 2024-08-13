@@ -1,3 +1,7 @@
+.parent {
+  background-color: var(--bgColor);
+}
+
 .heading {
   text-align: center;
   font-size: 6rem;

@@ -5,12 +5,12 @@ import { useRegisterMutation } from "../../redux/api/authApi";
 import { useRouter } from "next/navigation";
 import { ChangeEventHandler, FormEvent, useEffect, useState } from "react";
 import toast from "react-hot-toast";
-import ButtonLoader from "../layout/ButtonLoader";
 import styles from "./Login.module.css";
 import LayoutWrapper from "../LayoutWrapper";
 import ContentPadding from "../ContentPadding/ContentPadding";
 import FalseButton from "../FalseButton/FalseButton";
 import Button from "../Button/Button";
+import Nav from "../Nav/Nav";
 
 const Register = () => {
   const [user, setUser] = useState({
@@ -63,59 +63,63 @@ const Register = () => {
   };
 
   return (
-    <LayoutWrapper>
-      <ContentPadding>
-        <h1 className={styles.heading}>New User Register</h1>
-        <form className={styles.container} onSubmit={submitHandler}>
-          <div className={styles.lableInputBox}>
-            <label htmlFor='name_field' className='form-label'>
-              {" "}
-              Full Name{" "}
-            </label>
-            <input
-              type='text'
-              id='name_field'
-              name='name'
-              value={name}
-              onChange={onChange}
-            />
-          </div>
+    <section className={styles.parent}>
+      <Nav color='olive' barColor='oliveBar' />
 
-          <div className={styles.lableInputBox}>
-            <label className='form-label' htmlFor='email_field'>
-              {" "}
-              Email{" "}
-            </label>
-            <input
-              type='email'
-              id='email_field'
-              name='email'
-              value={email}
-              onChange={onChange}
-            />
-          </div>
+      <LayoutWrapper>
+        <ContentPadding>
+          <h1 className={styles.heading}>New User Register</h1>
+          <form className={styles.container} onSubmit={submitHandler}>
+            <div className={styles.lableInputBox}>
+              <label htmlFor='name_field' className='form-label'>
+                {" "}
+                Full Name{" "}
+              </label>
+              <input
+                type='text'
+                id='name_field'
+                name='name'
+                value={name}
+                onChange={onChange}
+              />
+            </div>
 
-          <div className={styles.lableInputBox}>
-            <label className='form-label' htmlFor='password_field'>
-              {" "}
-              Password{" "}
-            </label>
-            <input
-              type='password'
-              id='password_field'
-              name='password'
-              value={password}
-              onChange={onChange}
-              disabled={isLoading}
-            />
-          </div>
-          <div className={styles.btnContainer}>
-            <FalseButton btnType='primary' text='Register' />
-            <Button btnType='primaryiv' text='Login' href='/login' />
-          </div>
-        </form>
-      </ContentPadding>
-    </LayoutWrapper>
+            <div className={styles.lableInputBox}>
+              <label className='form-label' htmlFor='email_field'>
+                {" "}
+                Email{" "}
+              </label>
+              <input
+                type='email'
+                id='email_field'
+                name='email'
+                value={email}
+                onChange={onChange}
+              />
+            </div>
+
+            <div className={styles.lableInputBox}>
+              <label className='form-label' htmlFor='password_field'>
+                {" "}
+                Password{" "}
+              </label>
+              <input
+                type='password'
+                id='password_field'
+                name='password'
+                value={password}
+                onChange={onChange}
+                disabled={isLoading}
+              />
+            </div>
+            <div className={styles.btnContainer}>
+              <FalseButton btnType='primary' text='Register' />
+              <Button btnType='primaryiv' text='Login' href='/login' />
+            </div>
+          </form>
+        </ContentPadding>
+      </LayoutWrapper>
+    </section>
   );
 };
 export default Register;

@@ -3,7 +3,7 @@ import Nav from "../../../components/Nav/Nav";
 
 const LoginPage = () => {
   return (
-    <main>
+    <main style={{ backgroundColor: "#fffae6" }}>
       <Nav color='olive' barColor='oliveBar' />
       <Login />
     </main>
