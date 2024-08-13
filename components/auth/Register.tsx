@@ -7,7 +7,7 @@ import { ChangeEventHandler, FormEvent, useEffect, useState } from "react";
 import toast from "react-hot-toast";
 import ButtonLoader from "../layout/ButtonLoader";
 import styles from "./Login.module.css";
-import LayoutWrapper from "../LayoutWrapper/LayoutWrapper";
+import LayoutWrapper from "../LayoutWrapper";
 import ContentPadding from "../ContentPadding/ContentPadding";
 import FalseButton from "../FalseButton/FalseButton";
 import Button from "../Button/Button";
@@ -110,8 +110,8 @@ const Register = () => {
             />
           </div>
           <div className={styles.btnContainer}>
-            <FalseButton btnType='secondary' text='Register' />
-            <Button btnType='primary' text='Login' href='/login' />
+            <FalseButton btnType='primary' text='Register' />
+            <Button btnType='primaryiv' text='Login' href='/login' />
           </div>
         </form>
       </ContentPadding>

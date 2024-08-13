@@ -1,6 +1,6 @@
 .heading {
   text-align: center;
-  font-size: 3rem;
+  font-size: 6rem;
   margin-bottom: 3rem;
   background-color: var(--purple2);
   width: fit-content;
@@ -8,6 +8,11 @@
   margin-right: auto;
   padding: 2rem;
   border-radius: 10px;
+}
+
+.statement {
+  text-align: center;
+  width: 100%;
 }
 
 .container {
@@ -33,9 +38,9 @@
 }
 
 .lableInputBox input {
-  border: 1px solid var(--gray);
+  border: 2px solid var(--olive);
   padding: 1.3rem;
-  border-radius: 10px;
+  border-radius: 50px;
   width: 100%;
   line-height: 100%;
 }

@@ -164,15 +164,6 @@
     letter-spacing: -2px;
   }
 
-  .activeLink {
-    color: var(--green);
-    background-color: var(--black);
-    padding: 5px 25px;
-    padding-right: 35px;
-    border-top-left-radius: 0px;
-    border-bottom-left-radius: 0px;
-    text-decoration: underline;
-  }
 
   .icon {
     color: var(--green);

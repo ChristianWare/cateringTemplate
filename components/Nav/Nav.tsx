@@ -6,6 +6,9 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Button from "../Button/Button";
 import Person from "../../../public/icons/person.svg";
+import { useAppDispatch, useAppSelector } from "../../redux/hooks";
+import { useSession } from "next-auth/react";
+import { setIsAuthenticated, setUser } from "../../redux/features/userSlice";
 
 interface Props {
   color?: string;
@@ -13,6 +16,10 @@ interface Props {
 }
 
 const Nav: FC<Props> = ({ color = "", barColor = "" }) => {
+  const dispatch = useAppDispatch();
+  const { user } = useAppSelector((state) => state.auth);
+  const { data } = useSession();
+
   const [isOpen, setIsOpen] = useState(false);
   const [isOverlayVisible, setIsOverlayVisible] = useState(false);
 
@@ -20,6 +27,13 @@ const Nav: FC<Props> = ({ color = "", barColor = "" }) => {
     setIsOpen(!isOpen);
     setIsOverlayVisible(!isOverlayVisible);
   };
+
+  useEffect(() => {
+    if (data) {
+      dispatch(setUser(data?.user));
+      dispatch(setIsAuthenticated(true));
+    }
+  }, [data, dispatch]);
 
   useEffect(() => {
     const body = document.querySelector("body");

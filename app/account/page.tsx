@@ -6,15 +6,16 @@ import { useAppSelector } from "../../redux/hooks";
 import Link from "next/link";
 import Button from "../../components/Button/Button";
 import styles from "./AccountPage.module.css";
+import Nav from "../../components/Nav/Nav";
 
 const options = [
   {
-    option: "My Bookings",
+    option: "View My Bookings",
     desc: "See all of your bookings, and view receipts and confirmation statements.",
     href: "/bookings/me",
   },
   {
-    option: "Update Account",
+    option: "Update My Account",
     desc: "Update your username, email and password",
     href: "/me/update",
   },
@@ -22,17 +23,16 @@ const options = [
 
 const AccountPage = () => {
   const { user } = useAppSelector((state) => state.auth);
-  console.log(user);
-
   return (
-    <>
+    <main className={styles.parent}>
+      <Nav color='olive' barColor='oliveBar' />
       <LayoutWrapper>
         <ContentPadding>
           {user ? (
             <>
               <div className={styles.top}>
                 <h1 className={styles.heading}>
-                  Hi, <span className={styles.userName}>{user?.name} 👋</span>
+                  Hi, {user?.name}
                 </h1>
                 <h2>What would you like to do today?</h2>
               </div>
@@ -56,18 +56,18 @@ const AccountPage = () => {
             </>
           ) : (
             <>
-              <h1 className={styles.heading}>
+              <h2 className={styles.heading}>
                 You need to be logged in to access this page.
-              </h1>
+              </h2>
               <div className={styles.btnContainer}>
-                <Button href='/login' text='Login' btnType='secondary' />
-                <Button href='/' text='Go home' btnType='primary' />
+                <Button href='/login' text='Login' btnType='primaryiii' />
+                <Button href='/' text='Go home' btnType='primaryiv' />
               </div>
             </>
           )}
         </ContentPadding>
       </LayoutWrapper>
-    </>
+    </main>
   );
 };
 export default AccountPage;

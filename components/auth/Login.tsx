@@ -59,11 +59,24 @@ const Login = () => {
           <form className={styles.container} onSubmit={submitHandler}>
             {session ? (
               <>
-                <p>you are now logged in</p>
-                <hr />
-                <Link href='/' onClick={logoutHandler}>
+                <p className={styles.statement}>you are now logged in</p>
+                <div className={styles.btnContainer}>
+                  <Button
+                    btnType='primaryiii'
+                    text='Logout'
+                    href='/'
+                    onClick={logoutHandler}
+                  />
+                  <Button
+                    btnType='primaryiv'
+                    text='Go Home'
+                    href='/'
+                    onClick={logoutHandler}
+                  />
+                </div>
+                {/* <Link href='/' onClick={logoutHandler}>
                   Logout
-                </Link>
+                </Link> */}
               </>
             ) : (
               <>
@@ -96,12 +109,12 @@ const Login = () => {
                 </div>
                 <div className={styles.btnContainer}>
                   <FalseButton
-                    btnType='secondary'
+                    btnType='primary'
                     disabled={loading}
                     text={loading ? "Loading..." : "Login"}
                   />
                   <Button
-                    btnType='primary'
+                    btnType='primaryiv'
                     text='Forgot password'
                     href='/password/forgot'
                   />
