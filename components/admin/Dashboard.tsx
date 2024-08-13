@@ -67,17 +67,19 @@ const Dashboard = () => {
             className={styles.datePicker}
           />
         </div>
+      </div>
         <div className={styles.btnContainer}>
           <FalseButton
-            btnType='secondary'
+            btnType='primary'
             text={isLoading ? "Loading..." : "Get data"}
             disabled={isLoading}
             onClick={submitHandler}
           />
         </div>
-      </div>
+        <br />
+        <br />
+        <br />
       <SalesStats data={data} />
-
       <div>
         <div>
           <h4>Sales History</h4>

@@ -17,10 +17,10 @@ const SalesStats = ({ data }: Props) => {
             style={{ color: "#7065f0" }}
           ></i>
           <div>
-            <p>Sales:</p>
+            <p className={styles.stats}>Sales:</p>
             <p>
-              <b>
-                {(data?.totalSales / 2).toLocaleString("en-US", {
+              <b className={styles.stats}>
+                {(data?.totalSales).toLocaleString("en-US", {
                   minimumFractionDigits: 2,
                   maximumFractionDigits: 2,
                 })}
@@ -35,9 +35,11 @@ const SalesStats = ({ data }: Props) => {
           ></i>
 
           <div>
-            <p>Bookings:</p>
+            <p className={styles.stats}>Reservations:</p>
             <p>
-              <b>{Math.floor(parseFloat(data?.numberOfBookings) / 2)}</b>
+              <b className={styles.stats}>
+                {Math.floor(parseFloat(data?.numberOfBookings))}
+              </b>
             </p>
           </div>
         </div>
