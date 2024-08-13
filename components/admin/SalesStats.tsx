@@ -1,4 +1,6 @@
 import styles from "./SalesStats.module.css";
+import Money from "../../public/icons/money.svg";
+import Invoice from "../../public/icons/invoice.svg";
 
 interface Props {
   data: {
@@ -12,10 +14,7 @@ const SalesStats = ({ data }: Props) => {
     <div className={styles.container}>
       <div className={styles.content}>
         <div className={styles.box}>
-          <i
-            className='fas fa-dollar-sign fa-4x'
-            style={{ color: "#7065f0" }}
-          ></i>
+          <Money className={styles.icon} />
           <div>
             <p className={styles.stats}>Sales:</p>
             <p>
@@ -29,10 +28,7 @@ const SalesStats = ({ data }: Props) => {
           </div>
         </div>
         <div className={styles.box}>
-          <i
-            className='fas fa-file-invoice fa-4x'
-            style={{ color: "#7065f0" }}
-          ></i>
+          <Invoice className={styles.icon} />
 
           <div>
             <p className={styles.stats}>Reservations:</p>

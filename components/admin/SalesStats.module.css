@@ -22,6 +22,12 @@
   color: var(--bgColor);
 }
 
+.icon {
+  width: 5rem;
+  height: 5rem;
+  color: var(--bgColor);
+}
+
 @media screen and (max-width: 968px) {
   .content {
     grid-template-columns: repeat(1, 1fr);
