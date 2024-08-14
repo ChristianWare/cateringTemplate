@@ -4,11 +4,10 @@ import Image from "next/image";
 import styles from "./GalleryGrid.module.css";
 import { IImage } from "../../backend/models/room";
 import { useState } from "react";
-import LayoutWrapper from "../LayoutWrapper/LayoutWrapper";
-import ContentPadding from "../ContentPadding/ContentPadding";
+import LayoutWrapper from "../LayoutWrapper";
 import Back from "../../public/icons/back.svg";
 import Next from "../../public/icons/next.svg";
-import Cancel from "../../public/icons/cancel.svg";
+import Cancel from "../../public/icons/corporate.svg";
 
 interface Props {
   images: IImage[];
@@ -56,36 +55,34 @@ const GalleryGrid = ({ images }: Props) => {
         ))}
         {openModal && (
           <LayoutWrapper>
-            <ContentPadding>
-              <div className={styles.modalContainer}>
-                <Cancel
-                  className={styles.close}
-                  onClick={handleCloseModal}
+            <div className={styles.modalContainer}>
+              <Cancel
+                className={styles.close}
+                onClick={handleCloseModal}
+                width={40}
+                height={40}
+              />
+              <div className={styles.fullScreenImage}>
+                <Back
+                  className={styles.prev}
+                  onClick={prevSlide}
                   width={40}
                   height={40}
                 />
-                <div className={styles.fullScreenImage}>
-                  <Back
-                    className={styles.prev}
-                    onClick={prevSlide}
-                    width={40}
-                    height={40}
-                  />
-                  <Image
-                    src={images[slideNumber].url}
-                    alt={images[slideNumber].url}
-                    fill
-                    className={styles.modalImg}
-                  />
-                  <Next
-                    className={styles.next}
-                    onClick={nextSlide}
-                    width={40}
-                    height={40}
-                  />
-                </div>
+                <Image
+                  src={images[slideNumber].url}
+                  alt={images[slideNumber].url}
+                  fill
+                  className={styles.modalImg}
+                />
+                <Next
+                  className={styles.next}
+                  onClick={nextSlide}
+                  width={40}
+                  height={40}
+                />
               </div>
-            </ContentPadding>
+            </div>
           </LayoutWrapper>
         )}
       </div>

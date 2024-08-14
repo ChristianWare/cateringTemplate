@@ -18,15 +18,17 @@
 }
 
 .card {
-  border-radius: 20px;
-  background-color: var(--olive);
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border: 2px solid var(--olive);
+  /* background-color: var(--olive); */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
   height: 100%;
-  padding: 2rem;
+  /* padding: 2rem; */
 }
 
 .imgContainer {
@@ -37,8 +39,18 @@
 
 .img {
   object-fit: cover;
-  border-radius: 20px;
-  border: 2px solid var(--bgColor);
+  /* border-bottom-right-radius: 20px; */
+  /* border-bottom-left-radius: 20px; */
+  /* border: 2px solid var(--bgColor); */
+}
+
+.info {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
 }
 
 .title {
@@ -48,19 +60,24 @@
   line-height: 1em;
   text-align: center;
   width: 100%;
-  color: var(--bgColor);
+  color: var(--olive);
 }
 
 .price {
-  text-align: center;
+  /* text-align: center; */
   width: 100%;
-  color: var(--bgColor);
+  color: var(--olive);
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }
 
 .btnContainer {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   width: 100%;
+  margin-top: 1rem;
 }
 
 .btnContainerii {

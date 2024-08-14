@@ -39,7 +39,7 @@ export default async function Home() {
       <Hero />
       <HowItWorks />
       <AboutUsSection />
-      <Popular />
+      <Popular data={data} />
       <Usp />
       <Testimonials />
       <Faq />
