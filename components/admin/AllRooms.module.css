@@ -46,7 +46,7 @@
 
 .dataTable td {
   padding: 1rem;
-  border: 1px solid var(--olive2);
+  border: 1px solid var(--olive);
 }
 
 .actions {
@@ -56,6 +56,13 @@
   justify-content: center;
   gap: 2rem;
 }
+
+.icon {
+  width: 3rem;
+  height: 3rem;
+  color: var(--olive);
+}
+
 
 .dataTable div ul {
   margin-top: 2rem;

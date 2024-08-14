@@ -17,11 +17,11 @@ const NewRoom = ({ onClick, onClose }: Props) => {
     name: "",
     price: 0,
     description: "",
-    address: "",
-    googleMapsUrl: "",
-    category: "King",
-    guestCapacity: 1,
-    numOfBeds: 1,
+    // address: "",
+    // googleMapsUrl: "",
+    category: "Breakfast",
+    // guestCapacity: 1,
+    // numOfBeds: 1,
     internet: false,
     breakfast: false,
     airConditioned: false,
@@ -33,11 +33,11 @@ const NewRoom = ({ onClick, onClose }: Props) => {
     name,
     price,
     description,
-    address,
-    googleMapsUrl,
+    // address,
+    // googleMapsUrl,
     category,
-    guestCapacity,
-    numOfBeds,
+    // guestCapacity,
+    // numOfBeds,
     internet,
     breakfast,
     airConditioned,
@@ -69,12 +69,12 @@ const NewRoom = ({ onClick, onClose }: Props) => {
       name,
       pricePerNight: price,
       description,
-      address,
-      googleMapsUrl,
+      // address,
+      // googleMapsUrl,
       category,
-      guestCapacity: Number(guestCapacity),
-      numOfBeds: Number(numOfBeds),
-      isInternet: internet,
+      // guestCapacity: Number(guestCapacity),
+      // numOfBeds: Number(numOfBeds),
+      // isInternet: internet,
       isBreakfast: breakfast,
       IsAirConditioned: airConditioned,
       IsPetsAllowed: petsAllowed,
@@ -98,13 +98,13 @@ const NewRoom = ({ onClick, onClose }: Props) => {
     });
   };
 
-  // const roomFeatures: { name: string; value: keyof typeof roomDetails }[] = [
-  //   { name: "Internet", value: "internet" },
-  //   { name: "Breakfast", value: "breakfast" },
-  //   { name: "Air Conditioned", value: "airConditioned" },
-  //   { name: "Pets Allowed", value: "petsAllowed" },
-  //   { name: "Room Cleaning", value: "roomCleaning" },
-  // ];
+  const roomFeatures: { name: string; value: keyof typeof roomDetails }[] = [
+    { name: "Internet", value: "internet" },
+    { name: "Breakfast", value: "breakfast" },
+    { name: "Air Conditioned", value: "airConditioned" },
+    { name: "Pets Allowed", value: "petsAllowed" },
+    { name: "Room Cleaning", value: "roomCleaning" },
+  ];
 
   return (
     <div>
@@ -147,28 +147,6 @@ const NewRoom = ({ onClick, onClose }: Props) => {
             required
           ></textarea>
         </div>
-        <div className={styles.lableInputBox}>
-          <label htmlFor='address_field'>Address</label>
-          <input
-            type='text'
-            id='address_field'
-            name='address'
-            value={address}
-            onChange={onChange}
-            required
-          />
-        </div>
-        <div className={styles.lableInputBox}>
-          <label htmlFor='googleMapsUrl_field'>Google Maps URL</label>
-          <input
-            type='text'
-            id='googleMapsUrl_field'
-            name='googleMapsUrl'
-            value={googleMapsUrl}
-            onChange={onChange}
-            required
-          />
-        </div>
 
         <div className={styles.lableInputBox}>
           <label htmlFor='room_type_field'>Category</label>
@@ -178,78 +156,20 @@ const NewRoom = ({ onClick, onClose }: Props) => {
             value={category}
             onChange={onChange}
           >
-            {["King", "Single", "Twins"].map((value) => (
+            {["Breakfast", "Lunch/Dinner", "Dessert"].map((value) => (
               <option key={value} value={value}>
                 {value}
               </option>
             ))}
           </select>
         </div>
-
-        <div className={styles.lableInputBox}>
-          <label htmlFor='guest_field'>Guest Capacity</label>
-          <select
-            id='guest_field'
-            name='guestCapacity'
-            value={guestCapacity}
-            onChange={onChange}
-          >
-            {[1, 2, 3, 4, 5, 6].map((num) => (
-              <option key={num} value={num}>
-                {num}
-              </option>
-            ))}
-          </select>
-        </div>
-
-        <div className={styles.lableInputBox}>
-          <label htmlFor='numofbeds_field'>Number of Beds</label>
-          <select
-            id='numofbeds_field'
-            name='numOfBeds'
-            value={numOfBeds}
-            onChange={onChange}
-          >
-            {[1, 2, 3].map((num) => (
-              <option key={num} value={num}>
-                {num}
-              </option>
-            ))}
-          </select>
-        </div>
-
-        {/* <label className='mb-3'>Room Features</label> */}
-
-        {/* {roomFeatures?.map((feature) => (
-            <div className='form-check' key={feature.name}>
-              <input
-                className='form-check-input'
-                type='checkbox'
-                id={feature.name}
-                name={feature.value}
-                onChange={onChange}
-                checked={!!roomDetails[feature.value]}
-              />
-              <label className='form-check-label' htmlFor={feature.name}>
-                {feature.name}
-              </label>
-            </div>
-          ))} */}
         <div className={styles.btnContainer}>
           <FalseButton
-            btnType='secondary'
+            btnType='primary'
             text={isLoading ? "Creating..." : "Create Property"}
             onClick={onClick}
           />
         </div>
-
-        {/* <button
-            type='submit'
-            className='btn form-btn w-100 py-2'
-            disabled={isLoading}
-          >
-            {isLoading ? <ButtonLoader /> : "CREATE"}
-          </button> */}
       </form>
     </div>
   );

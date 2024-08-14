@@ -64,11 +64,11 @@ const roomSchema: Schema<IRoom> = new Schema({
   },
   address: {
     type: String,
-    required: [true, "Please enter room address"],
+    // required: [true, "Please enter room address"],
   },
   googleMapsUrl: {
     type: String,
-    required: [true, "Please enter Google Maps Url"],
+    // required: [true, "Please enter Google Maps Url"],
   },
   location: {
     type: {
@@ -87,11 +87,11 @@ const roomSchema: Schema<IRoom> = new Schema({
   },
   guestCapacity: {
     type: Number,
-    required: [true, "Please enter room guest capacity"],
+    // required: [true, "Please enter room guest capacity"],
   },
   numOfBeds: {
     type: Number,
-    required: [true, "Please enter number of beds in room"],
+    // required: [true, "Please enter number of beds in room"],
   },
   isInternet: {
     type: Boolean,
@@ -135,9 +135,9 @@ const roomSchema: Schema<IRoom> = new Schema({
   ],
   category: {
     type: String,
-    required: [true, "Please enter room category"],
+    required: [true, "Please select category"],
     enum: {
-      values: ["King", "Single", "Twin"],
+      values: ["Breakfast", "Lunch/Dinner", "Dessert"],
       message: "Please select correct category for room",
     },
   },

@@ -21,10 +21,10 @@ const UpdateRoom = ({ data, onClick }: Props) => {
     name: room?.name,
     price: room?.pricePerNight,
     description: room?.description,
-    address: room?.address,
+    // address: room?.address,
     category: room?.category,
-    guestCapacity: room?.guestCapacity,
-    numOfBeds: room?.numOfBeds,
+    // guestCapacity: room?.guestCapacity,
+    // numOfBeds: room?.numOfBeds,
     internet: room?.isInternet,
     breakfast: room?.isBreakfast,
     airConditioned: room?.isAirConditioned,
@@ -37,10 +37,10 @@ const UpdateRoom = ({ data, onClick }: Props) => {
     name,
     price,
     description,
-    address,
+    // address,
     category,
-    guestCapacity,
-    numOfBeds,
+    // guestCapacity,
+    // numOfBeds,
     internet,
     breakfast,
     airConditioned,
@@ -60,7 +60,7 @@ const UpdateRoom = ({ data, onClick }: Props) => {
 
     if (isSuccess) {
       router.refresh();
-      toast.success("Room updated");
+      toast.success("Menu Item Updated");
       // router.push("/admin/rooms");
     }
   }, [error, isSuccess, router]);
@@ -72,11 +72,11 @@ const UpdateRoom = ({ data, onClick }: Props) => {
       name,
       pricePerNight: price,
       description,
-      address,
+      // address,
       googleMapsUrl,
       category,
-      guestCapacity: Number(guestCapacity),
-      numOfBeds: Number(numOfBeds),
+      // guestCapacity: Number(guestCapacity),
+      // numOfBeds: Number(numOfBeds),
       isInternet: internet,
       isBreakfast: breakfast,
       IsAirConditioned: airConditioned,
@@ -111,7 +111,7 @@ const UpdateRoom = ({ data, onClick }: Props) => {
 
   return (
     <div>
-      <h2 className={styles.heading}>Update Room</h2>
+      <h2 className={styles.heading}>Update Menu - Item</h2>
       <form
         className={styles.container}
         onSubmit={submitHandler}
@@ -159,34 +159,6 @@ const UpdateRoom = ({ data, onClick }: Props) => {
             required
           ></textarea>
         </div>
-        <div className={styles.lableInputBox}>
-          <label htmlFor='address_field' className='form-label'>
-            Address
-          </label>
-          <input
-            type='text'
-            id='address_field'
-            className='form-control'
-            name='address'
-            value={address}
-            onChange={onChange}
-            required
-          />
-        </div>
-        <div className={styles.lableInputBox}>
-          <label htmlFor='googleMapsUrl_field' className='form-label'>
-            Google Maps URL
-          </label>
-          <input
-            type='text'
-            id='googleMapsUrl_field'
-            className='form-control'
-            name='googleMapsUrl'
-            value={googleMapsUrl}
-            onChange={onChange}
-            required
-          />
-        </div>
 
         <div className={styles.lableInputBox}>
           <label htmlFor='room_type_field' className='form-label'>
@@ -199,53 +171,13 @@ const UpdateRoom = ({ data, onClick }: Props) => {
             value={category}
             onChange={onChange}
           >
-            {["King", "Single", "Twins"].map((value) => (
+            {["Breakfast", "Lunch/Dinner", "Dessert"].map((value) => (
               <option key={value} value={value}>
                 {value}
               </option>
             ))}
           </select>
         </div>
-
-        <div className={styles.lableInputBox}>
-          <label htmlFor='guest_field' className='form-label'>
-            Guest Capacity
-          </label>
-          <select
-            className='form-select'
-            id='guest_field'
-            name='guestCapacity'
-            value={guestCapacity}
-            onChange={onChange}
-          >
-            {[1, 2, 3, 4, 5, 6].map((num) => (
-              <option key={num} value={num}>
-                {num}
-              </option>
-            ))}
-          </select>
-        </div>
-
-        <div className={styles.lableInputBox}>
-          <label htmlFor='numofbeds_field' className='form-label'>
-            Number of Beds
-          </label>
-          <select
-            className='form-select'
-            id='numofbeds_field'
-            name='numOfBeds'
-            value={numOfBeds}
-            onChange={onChange}
-          >
-            {[1, 2, 3].map((num) => (
-              <option key={num} value={num}>
-                {num}
-              </option>
-            ))}
-          </select>
-        </div>
-
-        {/* <label className='mb-3'>Room Features</label> */}
 
         {/* {roomFeatures?.map((feature) => (
             <div className='form-check' key={feature.name}>
@@ -272,7 +204,7 @@ const UpdateRoom = ({ data, onClick }: Props) => {
           </button> */}
         <div className={styles.btnContainer}>
           <FalseButton
-            btnType='secondary'
+            btnType='primary'
             text={isLoading ? "Updating..." : "Update"}
             onClick={onClick}
           />

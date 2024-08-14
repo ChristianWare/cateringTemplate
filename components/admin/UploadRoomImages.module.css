@@ -2,7 +2,7 @@
   text-align: center;
   margin-bottom: 2rem;
   font-size: 3rem;
-  color: var(--purple);
+  color: var(--olive);
   text-decoration: underline;
   margin-left: auto;
   margin-right: auto;
@@ -34,14 +34,14 @@
 .lableInputBox label {
   display: block;
   font-weight: 700;
-  color: var(--purple);
+  color: var(--olive);
   margin-bottom: 0.5rem;
 }
 
 .lableInputBox input,
 .lableInputBox textarea,
 .lableInputBox select {
-  border: 1px solid var(--gray);
+  border: 2px solid var(--olive);
   padding: 1rem;
   border-radius: 10px;
   width: 100%;
@@ -61,7 +61,7 @@
 .imgGridContainer span,
 .msg {
   font-weight: 700;
-  color: var(--purple);
+  color: var(--olive);
 }
 
 .msg {

@@ -11,6 +11,8 @@ import styles from "./AllRooms.module.css";
 import Modal from "../Modal/Modal";
 import FalseButton from "../FalseButton/FalseButton";
 import NewRoom from "./NewRoom";
+import Pencil from "../../public/icons/pencil.svg";
+import Images from "../../public/icons/images.svg";
 
 interface Props {
   data: {
@@ -56,7 +58,7 @@ const AllRooms = ({ data }: Props) => {
     const data: { columns: any[]; rows: any[] } = {
       columns: [
         {
-          label: <div className={styles.theadContainer}>Room ID</div>,
+          label: <div className={styles.theadContainer}>Item ID</div>,
           field: "id",
           sort: "asc",
         },
@@ -86,10 +88,10 @@ const AllRooms = ({ data }: Props) => {
           actions: (
             <div className={styles.actions}>
               <Link href={`/admin/rooms/${room._id}`}>
-                <i className='fa fa-pencil'></i>
+                <Pencil className={styles.icon} />
               </Link>
               <Link href={`/admin/rooms/${room._id}/upload_images`}>
-                <i className='fa fa-images'></i>
+                <Images className={styles.icon} />
               </Link>
               <div className={styles.trash}>
                 <i
@@ -106,7 +108,7 @@ const AllRooms = ({ data }: Props) => {
   };
 
   return (
-    <div>
+    <>
       <div
         style={{
           display: "flex",
@@ -118,7 +120,7 @@ const AllRooms = ({ data }: Props) => {
         <h2 className={styles.heading}>Menu - Items</h2>
         <FalseButton
           btnType='primary'
-          text='New Property'
+          text='+  Create New'
           onClick={() => setIsModalOpenii(true)}
         />
         <Modal
@@ -158,7 +160,7 @@ const AllRooms = ({ data }: Props) => {
         </Modal>
       </div>
       <MDBDataTable data={setRooms()} className={styles.dataTable} />
-    </div>
+    </>
   );
 };
 export default AllRooms;

@@ -2,7 +2,7 @@
   text-align: center;
   margin-bottom: 2rem;
   font-size: 3rem;
-  color: var(--purple);
+  color: var(--olive);
   text-decoration: underline;
 }
 
@@ -23,19 +23,25 @@
 .lableInputBox label {
   display: block;
   font-weight: 700;
-  color: var(--purple);
+  color: var(--olive);
   margin-bottom: 0.5rem;
 }
 
 .lableInputBox input,
 .lableInputBox textarea,
 .lableInputBox select {
-  border: 1px solid var(--gray);
+  border: 2px solid var(--olive);
   padding: 1rem;
-  border-radius: 10px;
+  padding-left: 2rem;
+  border-radius: 50px;
   width: 100%;
   line-height: 100%;
   appearance: none;
+}
+
+.lableInputBox textarea {
+  border-radius: 20px;
+  padding: 2rem;
 }
 
 .btnContainer {

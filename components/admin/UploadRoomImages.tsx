@@ -161,7 +161,7 @@ const UploadRoomImages = ({ data }: Props) => {
               </div>
               <div className={styles.btnContainer}>
                 <FalseButton
-                  btnType='secondary'
+                  btnType='primary'
                   text={isLoading ? "Uploading..." : "Upload"}
                   onClick={submitHandler}
                   disabled={isLoading || isDeleteLoading}
