@@ -1,12 +1,14 @@
 import Image from "next/image";
 import styles from "./ImageGrid.module.css";
 import { IImage } from "../../backend/models/room";
+import Label from "../Label/Label";
 
 interface Props {
   images: IImage[];
+  text: string;
 }
 
-const ImageGrid = ({ images }: Props) => {
+const ImageGrid = ({ images, text }: Props) => {
   return (
     <div className={styles.imgGrid}>
       <div className={styles.gridLeft}>
@@ -17,6 +19,9 @@ const ImageGrid = ({ images }: Props) => {
             fill
             className={styles.img}
           />
+          <div className={styles.labelContainer}>
+            <Label text={text} color='category' />
+          </div>
         </div>
       </div>
       <div className={styles.gridRight}>

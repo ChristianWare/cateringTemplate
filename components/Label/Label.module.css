@@ -28,8 +28,9 @@
 }
 
 .category {
-  background-color: var(--olive);
-  color: var(--bgColor);
+  background-color: var(--green);
+  border: 1px solid var(--olive);
+  color: var(--olive);
   padding: 0.5rem 1.5rem;
   border-radius: 50px;
   font-size: 1.4rem;

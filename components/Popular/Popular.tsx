@@ -73,21 +73,26 @@ const Popular = ({ data }: Props) => {
                     fill
                     className={styles.img}
                   />
+                  <div className={styles.labelContainer}>
+                    <Label text={x.category} color='category' />
+                  </div>
                 </div>
-                <Label text={x.category} color='category' />
-                <div className={styles.info}>
                   <h3 className={styles.title}>{x.name}</h3>
+                <div className={styles.info}>
                   <p className={styles.price}>{x.description}</p>
-                  {/* <p className={styles.price}>{x.category}</p> */}
                   <div className={styles.btnContainer}>
-                    <Button btnType='primaryiii' text='More Details' href='/' />
+                    <Button
+                      btnType='primaryiv'
+                      text='More Details'
+                      href={`/properties/${x?._id}`}
+                    />
                   </div>
                 </div>
               </div>
             ))}
           </div>
           <div className={styles.btnContainerii}>
-            <Button btnType='primaryiii' text='See Entire Menu' href='/' />
+            <Button btnType='primaryiii' text='See Entire Menu' href='/menu' />
           </div>
         </div>
       </LayoutWrapper>
