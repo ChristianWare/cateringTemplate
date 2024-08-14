@@ -4,6 +4,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import styles from "./UserSidebar.module.css";
+import User from "../../public/icons/user.svg";
+import Lock from "../../public/icons/lock.svg";
 
 const UserSidebar = () => {
   const pathname = usePathname();
@@ -12,17 +14,17 @@ const UserSidebar = () => {
     {
       name: "Update Profile",
       url: "/me/update",
-      icon: "fas fa-user",
+      icon: <User className={styles.icon} />,
     },
-    {
-      name: "Upload Avatar",
-      url: "/me/upload_avatar",
-      icon: "fas fa-user-circle",
-    },
+    // {
+    //   name: "Upload Avatar",
+    //   url: "/me/upload_avatar",
+    //   icon: "fas fa-user-circle",
+    // },
     {
       name: "Update Password",
       url: "/me/update_password",
-      icon: "fas fa-lock",
+      icon: <Lock className={styles.icon} />,
     },
   ];
 
@@ -33,7 +35,7 @@ const UserSidebar = () => {
   };
 
   return (
-    <div className={styles.container}>
+    <div className={styles.containerii}>
       {menuItem.map((x, index) => (
         <Link
           key={index}
@@ -42,7 +44,7 @@ const UserSidebar = () => {
           onClick={() => handleMenuItemClick(x.url)}
           aria-current={activeMenuItem === x.url ? "true" : "false"}
         >
-          <i className={`${x.icon} fa-fw pe-2 mr-10`}></i>
+          <i>{x.icon}</i>
           {x.name}
         </Link>
       ))}

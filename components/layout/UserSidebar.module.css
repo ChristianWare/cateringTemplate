@@ -1,9 +1,5 @@
-.container {
-  /* display: flex;
-  width: 100%;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: 1rem; */
+.container,
+.containerii {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 1rem;
@@ -12,6 +8,10 @@
   border-radius: 10px;
   margin-bottom: 5rem;
   width: 100%;
+}
+
+.containerii {
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .icon {
@@ -58,16 +58,13 @@
 }
 
 @media screen and (max-width: 1068px) {
-  .container {
+  .container,
+  .containerii {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media screen and (max-width: 900px) {
-  /* .container {
-    flex-direction: row;
-  } */
-
   .btn,
   .active {
     flex: 1;
@@ -75,7 +72,12 @@
 
   .container {
     flex-wrap: wrap;
-    /* width: fit-content; */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .containerii {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 

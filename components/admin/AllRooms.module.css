@@ -1,12 +1,12 @@
 .heading {
   font-size: 3rem;
-  color: var(--purple);
+  color: var(--olive);
   text-decoration: underline;
 }
 
 .dataTable {
   margin-top: 5rem;
-  border: 2px solid var(--purple2);
+  border: 2px solid var(--olive);
   border-radius: 20px;
   padding: 3rem;
   width: 100%;
@@ -30,24 +30,23 @@
   border-radius: 5px;
   padding-left: 5px;
   padding: 0.5rem;
-  border: 2px solid var(--purple);
+  border: 2px solid var(--olive);
   margin-bottom: 3rem;
 }
 
 .theadContainer {
-  background-color: var(--purple2);
+  border: 1px solid var(--olive);
   padding: 1rem;
   width: 100%;
   display: block;
   padding: 2rem;
   cursor: pointer;
-  /* margin-top: 3rem; */
   white-space: nowrap;
 }
 
 .dataTable td {
   padding: 1rem;
-  border: 1px solid var(--purple2);
+  border: 1px solid var(--olive2);
 }
 
 .actions {

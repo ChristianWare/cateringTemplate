@@ -10,7 +10,6 @@ import toast from "react-hot-toast";
 import styles from "./AllBookings.module.css";
 import Modal from "../Modal/Modal";
 import FalseButton from "../FalseButton/FalseButton";
-import { useAppSelector } from "../../redux/hooks";
 
 interface Props {
   data: {
@@ -22,7 +21,6 @@ const AllBookings = ({ data }: Props) => {
   const bookings = data?.bookings;
   const router = useRouter();
 
-  const { user } = useAppSelector((state) => state.auth);
 
   const [modalBookingId, setModalBookingId] = useState<string | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -76,16 +74,16 @@ const AllBookings = ({ data }: Props) => {
           field: "datebooked",
           sort: "asc",
         },
-        {
-          label: <div className={styles.theadContainer}>Check In</div>,
-          field: "checkin",
-          sort: "asc",
-        },
-        {
-          label: <div className={styles.theadContainer}>Check Out</div>,
-          field: "checkout",
-          sort: "asc",
-        },
+        // {
+        //   label: <div className={styles.theadContainer}>Check In</div>,
+        //   field: "checkin",
+        //   sort: "asc",
+        // },
+        // {
+        //   label: <div className={styles.theadContainer}>Check Out</div>,
+        //   field: "checkout",
+        //   sort: "asc",
+        // },
         {
           label: <div className={styles.theadContainer}>Subtotal</div>,
           field: "amountpaid",
@@ -122,8 +120,8 @@ const AllBookings = ({ data }: Props) => {
           data?.rows?.push({
             id: booking._id, // Use paymentInfo ID as the unique identifier
             datebooked: formatDate(booking.createdAt),
-            checkin: formatDate(booking?.checkInDate),
-            checkout: formatDate(booking?.checkOutDate),
+            // checkin: formatDate(booking?.checkInDate),
+            // checkout: formatDate(booking?.checkOutDate),
             amountpaid: `$${booking?.amountPaid?.toLocaleString("en-US", {
               minimumFractionDigits: 2,
               maximumFractionDigits: 2,
@@ -181,7 +179,7 @@ const AllBookings = ({ data }: Props) => {
           {/* {bookings?.length > 1
             ? bookings?.length / 2 + " Bookings"
             : bookings?.length + " Bookings"} */}
-          Bookings
+          Reservations
         </h2>
       </div>
       <MDBDataTable

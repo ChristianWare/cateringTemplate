@@ -34,7 +34,7 @@
 .lableInputBox textarea,
 .lableInputBox select {
   border: 1px solid var(--gray);
-  padding: 1.3rem;
+  padding: 1rem;
   border-radius: 10px;
   width: 100%;
   line-height: 100%;

@@ -3,6 +3,7 @@ import { ReactNode } from "react";
 import LayoutWrapper from "../../components/LayoutWrapper";
 import ContentPadding from "../../components/ContentPadding/ContentPadding";
 import styles from "./settingStyles.module.css";
+import Nav from "../../components/Nav/Nav";
 
 interface Props {
   children: ReactNode;
@@ -10,8 +11,9 @@ interface Props {
 
 const UserLayout = ({ children }: Props) => {
   return (
-    <LayoutWrapper>
-      <ContentPadding>
+    <main className={styles.parent}>
+      <Nav color='olive' barColor='oliveBar' />
+      <LayoutWrapper>
         <h1 className={styles.heading}>User Settings</h1>
         <div className={styles.content}>
           <div className={styles.left}>
@@ -19,8 +21,8 @@ const UserLayout = ({ children }: Props) => {
           </div>
           <div className={styles.right}>{children}</div>
         </div>
-      </ContentPadding>
-    </LayoutWrapper>
+      </LayoutWrapper>
+    </main>
   );
 };
 export default UserLayout;

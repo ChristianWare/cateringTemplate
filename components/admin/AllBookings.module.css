@@ -1,12 +1,12 @@
 .heading {
   font-size: 3rem;
-  color: var(--purple);
+  color: var(--olive);
   text-decoration: underline;
 }
 
 .dataTable {
   margin-top: 5rem;
-  border: 2px solid var(--purple2);
+  border: 2px solid var(--olive);
   border-radius: 20px;
   padding: 3rem;
   width: 100%;
@@ -30,7 +30,7 @@
   border-radius: 5px;
   padding-left: 5px;
   padding: 0.5rem;
-  border: 2px solid var(--purple);
+  border: 2px solid var(--olive);
   margin-bottom: 3rem;
   margin-right: auto;
   margin-left: auto;
@@ -38,26 +38,24 @@
   /* display: none; */
 }
 
-
 .dataTable .col-sm-12 .col-md-6 {
   display: none;
 }
 
 .theadContainer {
-  background-color: var(--purple2);
+  border: 1px solid var(--olive);
   padding: 1rem;
   width: 100%;
   display: block;
   padding: 2rem;
   cursor: pointer;
   white-space: nowrap;
-    text-align: left;
-
+  text-align: left;
 }
 
 .dataTable td {
   padding: 1rem 2rem;
-  border: 1px solid var(--purple2);
+  border: 1px solid var(--olive);
 }
 
 .actions {

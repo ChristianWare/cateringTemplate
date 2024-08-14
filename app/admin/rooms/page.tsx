@@ -24,8 +24,8 @@ export default async function AdminRoomsPage() {
   }
 
   return (
-    <div className='container'>
+    <main>
       <AllRooms data={data} />
-    </div>
+    </main>
   );
 }

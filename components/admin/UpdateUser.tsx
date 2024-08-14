@@ -92,7 +92,7 @@ const UpdateUser = ({ data }: Props) => {
           </div>
           <div className={styles.btnContainer}>
             <FalseButton
-              btnType='secondary'
+              btnType='primary'
               text={isLoading ? "Loading..." : "Update"}
             />
           </div>

@@ -40,53 +40,52 @@ const UpdatePassword = () => {
   };
 
   return (
-      <ContentPadding>
-        <h2 className={styles.heading}>Change Password</h2>
+    <ContentPadding>
+      <h2 className={styles.heading}>Change Password</h2>
+      <form className={styles.container} onSubmit={submitHandler}>
+        <div className={styles.lableInputBox}>
+          <label className='form-label' htmlFor='old_password_field'>
+            Old Password
+          </label>
+          <input
+            type='password'
+            id='old_password_field'
+            className='form-control'
+            name='oldPassword'
+            value={oldPassword}
+            onChange={(e) => setOldPassword(e.target.value)}
+          />
+        </div>
 
-        <form className={styles.container} onSubmit={submitHandler}>
-          <div className={styles.lableInputBox}>
-            <label className='form-label' htmlFor='old_password_field'>
-              Old Password
-            </label>
-            <input
-              type='password'
-              id='old_password_field'
-              className='form-control'
-              name='oldPassword'
-              value={oldPassword}
-              onChange={(e) => setOldPassword(e.target.value)}
-            />
-          </div>
+        <div className={styles.lableInputBox}>
+          <label className='form-label' htmlFor='new_password_field'>
+            New Password
+          </label>
+          <input
+            type='password'
+            id='new_password_field'
+            className='form-control'
+            name='password'
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+        </div>
 
-          <div className={styles.lableInputBox}>
-            <label className='form-label' htmlFor='new_password_field'>
-              New Password
-            </label>
-            <input
-              type='password'
-              id='new_password_field'
-              className='form-control'
-              name='password'
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
-          </div>
-
-          {/* <button
+        {/* <button
             type='submit'
             className='btn form-btn w-100 py-2'
             disabled={isLoading}
           >
             {isLoading ? <ButtonLoader /> : "Set Password"}
           </button> */}
-          <div className={styles.btnContainer}>
-            <FalseButton
-              btnType='secondary'
-              text={isLoading ? "Loading..." : "Set Password"}
-            />
-          </div>
-        </form>
-      </ContentPadding>
+        <div className={styles.btnContainer}>
+          <FalseButton
+            btnType='primary'
+            text={isLoading ? "Loading..." : "Set Password"}
+          />
+        </div>
+      </form>
+    </ContentPadding>
   );
 };
 export default UpdatePassword;

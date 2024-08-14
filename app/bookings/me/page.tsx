@@ -2,7 +2,7 @@ import Error from "../../error";
 import MyBookings from "../../../components/booking/MyBookings";
 import { getAuthHeader } from "../../../helpers/authHeaders";
 import LayoutWrapper from "../../../components/LayoutWrapper";
-import ContentPadding from "../../../components/ContentPadding/ContentPadding";
+import Nav from "../../../components/Nav/Nav";
 
 export const metadata = {
   title: "My Bookings - BookIT",
@@ -24,14 +24,11 @@ export default async function MyBookingsPage() {
   }
 
   return (
-    <>
+    <main style={{ backgroundColor: "#fffae6" }}>
+      <Nav color='olive' barColor='oliveBar' />
       <LayoutWrapper>
-        <ContentPadding>
-          <div className='container'>
-            <MyBookings data={data} />
-          </div>
-        </ContentPadding>
+        <MyBookings data={data} />
       </LayoutWrapper>
-    </>
+    </main>
   );
 }

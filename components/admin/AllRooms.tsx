@@ -115,13 +115,9 @@ const AllRooms = ({ data }: Props) => {
           marginBottom: "50px",
         }}
       >
-        <h2 className={styles.heading}>
-          {rooms?.length > 1
-            ? rooms?.length + " Properties"
-            : rooms?.length + " Property"}
-        </h2>
+        <h2 className={styles.heading}>Menu - Items</h2>
         <FalseButton
-          btnType='secondary'
+          btnType='primary'
           text='New Property'
           onClick={() => setIsModalOpenii(true)}
         />
@@ -137,7 +133,7 @@ const AllRooms = ({ data }: Props) => {
           </p>
           <div className={styles.btnContainer}>
             <FalseButton
-              btnType='secondary'
+              btnType='primary'
               text={isLoading ? "Deleting..." : "Delete Property"}
               onClick={() => deleteRoomHandler(modalRoomId!)}
               disabled={isLoading}

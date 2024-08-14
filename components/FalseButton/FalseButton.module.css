@@ -25,9 +25,9 @@
   cursor: pointer;
 }
 
-.btn:active {
+/* .btn:active {
   transform: translate(10px, 10px);
-}
+} */
 
 .primary {
   color: var(--olive);

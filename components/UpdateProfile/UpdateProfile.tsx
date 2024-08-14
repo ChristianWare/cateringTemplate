@@ -71,40 +71,40 @@ const UpdateProfile = () => {
   };
 
   return (
-      <>
-        <ContentPadding>
-          <h2 className={styles.heading}>Update Profile Name</h2>
-          <form className={styles.container} onSubmit={submitHandler}>
-            <div className={styles.lableInputBox}>
-              <label htmlFor='name_field'>Name</label>
-              <input
-                type='text'
-                id='name_field'
-                name='name'
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-              />
-            </div>
+    <>
+      <ContentPadding>
+        <h2 className={styles.heading}>Update Profile Name</h2>
+        <form className={styles.container} onSubmit={submitHandler}>
+          <div className={styles.lableInputBox}>
+            <label htmlFor='name_field'>Name</label>
+            <input
+              type='text'
+              id='name_field'
+              name='name'
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
+          </div>
 
-            <div className={styles.lableInputBox}>
-              <label htmlFor='email_field'>Email</label>
-              <input
-                type='email'
-                id='email_field'
-                name='email'
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-              />
-            </div>
-            <div className={styles.btnContainer}>
-              <FalseButton
-                btnType='secondary'
-                text={isLoading ? "Loading..." : "Update"}
-              />
-            </div>
-          </form>
-        </ContentPadding>
-      </>
+          <div className={styles.lableInputBox}>
+            <label htmlFor='email_field'>Email</label>
+            <input
+              type='email'
+              id='email_field'
+              name='email'
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </div>
+          <div className={styles.btnContainer}>
+            <FalseButton
+              btnType='primary'
+              text={isLoading ? "Loading..." : "Update"}
+            />
+          </div>
+        </form>
+      </ContentPadding>
+    </>
   );
   2;
 };

@@ -10,6 +10,8 @@ import toast from "react-hot-toast";
 import styles from "./AllUsers.module.css";
 import FalseButton from "../FalseButton/FalseButton";
 import Modal from "../Modal/Modal";
+import Pencil from "../../public/icons/pencil.svg";
+import Trash from "../../public/icons/trash.svg";
 
 interface Props {
   data: {
@@ -101,11 +103,8 @@ const AllUsers = ({ data }: Props) => {
 
           actions: (
             <div className={styles.actions}>
-              <Link
-                href={`/admin/users/${user._id}`}
-                className='btn btn-outline-primary'
-              >
-                <i className='fa fa-pencil'></i>
+              <Link href={`/admin/users/${user._id}`}>
+                <Pencil className={styles.icon} />
               </Link>
 
               <button
@@ -113,7 +112,7 @@ const AllUsers = ({ data }: Props) => {
                 disabled={isLoading}
                 onClick={() => handleDeleteModal(user?._id)}
               >
-                <i className='fa fa-trash'></i>
+                <Trash className={styles.icon} />
               </button>
             </div>
           ),
@@ -123,9 +122,11 @@ const AllUsers = ({ data }: Props) => {
     return data;
   };
 
+
+
   return (
     <div className='container'>
-      <h2 className={styles.heading}>{users?.length} Users</h2>
+      <h2 className={styles.heading}>Users</h2>
       <MDBDataTable data={setUsers()} className={styles.dataTable} />
       <Modal
         isOpen={isModalOpen && modalUserId !== null}
@@ -135,15 +136,16 @@ const AllUsers = ({ data }: Props) => {
         }}
       >
         <p>Are you sure you want to delete user? This can not be undone.</p>
+
         <div className={styles.btnContainer}>
           <FalseButton
-            btnType='secondary'
+            btnType='primary'
             text={isLoading ? "Deleting..." : "Delete User"}
             onClick={() => deleteUserHandler(modalUserId!)}
             disabled={isLoading}
           />
           <FalseButton
-            btnType='primary'
+            btnType='primaryiv'
             text='Cancel'
             onClick={() => {
               setIsModalOpen(false);

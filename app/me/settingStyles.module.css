@@ -1,6 +1,11 @@
+.parent {
+  background-color: var(--bgColor);
+}
+
 .heading {
   text-align: center;
   margin-bottom: 7rem;
+  font-size: 7rem;
 }
 
 /* .content {
