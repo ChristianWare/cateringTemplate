@@ -1,4 +1,5 @@
 import Nav from "../../../components/Nav/Nav";
+import Popular from "../../../components/Popular/Popular";
 import RoomDetails from "../../../components/RoomDetails/RoomDetails";
 import Error from "../../error";
 
@@ -14,8 +15,19 @@ const getRoom = async (id: string) => {
   return res.json();
 };
 
+const getRooms = async () => {
+  try {
+    const res = await fetch(`${process.env.API_URL}/api/rooms`);
+    const data = res.json();
+    return data;
+  } catch (error) {
+    console.log("error => ", error);
+  }
+};
+
 export default async function RoomDetailsPage({ params }: Props) {
   const data = await getRoom(params?.id);
+  const dataii = await getRooms();
 
   if (data?.errMessage) {
     return <Error error={data} />;
@@ -25,6 +37,7 @@ export default async function RoomDetailsPage({ params }: Props) {
     <main style={{ backgroundColor: "#fffae6" }}>
       <Nav color='olive' barColor='oliveBar' />
       <RoomDetails data={data} />
+      <Popular data={dataii} />
     </main>
   );
 }

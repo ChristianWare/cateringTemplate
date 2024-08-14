@@ -1,8 +1,7 @@
-.container {
-}
+
 
 .span {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   color: var(--text);
   display: block;
   font-family: var(--mulish);
@@ -31,7 +30,7 @@
   background-color: var(--green);
   border: 1px solid var(--olive);
   color: var(--olive);
-  padding: 0.5rem 1.5rem;
+  padding: 0.3rem 1.5rem;
   border-radius: 50px;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 }

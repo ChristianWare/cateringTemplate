@@ -21,13 +21,7 @@
   border-radius: 20px;
   border: 2px solid var(--white);
   cursor: pointer;
-  transition: all 0.1s ease-in;
-}
-
-.img:hover {
-  border: 2px solid var(--purple);
-  border-radius: 20px;
-  transition: all 0.1s ease-in;
+  border: 2px solid var(--olive);
 }
 
 .modalContainer {

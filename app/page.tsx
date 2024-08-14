@@ -20,7 +20,6 @@ const getRooms = async () => {
   try {
     const res = await fetch(`${process.env.API_URL}/api/rooms`);
     const data = res.json();
-    // revalidatePath("/api/rooms");
     return data;
   } catch (error) {
     console.log("error => ", error);

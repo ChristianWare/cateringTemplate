@@ -166,7 +166,7 @@ const NewRoom = ({ onClick, onClose }: Props) => {
         <div className={styles.btnContainer}>
           <FalseButton
             btnType='primary'
-            text={isLoading ? "Creating..." : "Create Property"}
+            text={isLoading ? "Creating..." : "Create Menu Item"}
             onClick={onClick}
           />
         </div>

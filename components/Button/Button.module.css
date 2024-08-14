@@ -51,10 +51,20 @@
   border: 2px solid var(--olive);
 }
 
+.primaryiii:hover {
+  background-color: var(--bgColor);
+  
+}
+
 .primaryiv {
   color: var(--olive);
   background-color: transparent;
   border: 2px solid var(--olive);
+}
+
+.primaryiv:hover {
+  background-color: var(--olive);
+  color: var(--bgColor);
 }
 
 .secondary {

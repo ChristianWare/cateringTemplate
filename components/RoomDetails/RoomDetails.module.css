@@ -1,12 +1,8 @@
-.heading {
-  margin-bottom: 3rem;
-}
-
 .top {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: space-between;
 }
 
 .price {
@@ -14,8 +10,8 @@
   width: fit-content;
   padding: 2rem;
   color: var(--bgColor);
-  border-radius: 10px;
-  font-size: 3rem;
+  border-radius: 15px;
+  font-size: 2.5rem;
   font-weight: 600;
   letter-spacing: -1px;
   display: flex;
@@ -33,7 +29,7 @@
   margin-top: 2rem;
   display: flex;
   align-items: flex-start;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 3rem;
   flex-wrap: wrap;
 }
@@ -94,9 +90,7 @@
 }
 
 .copy {
-  font-size: 1.8rem;
   font-weight: 500;
-  line-height: 1.8em;
   opacity: 0.7;
 }
 
@@ -136,6 +130,7 @@
 
 @media screen and (max-width: 968px) {
   .top {
+    flex-direction: column;
     align-items: center;
     justify-content: center;
   }
@@ -144,8 +139,10 @@
     text-align: center;
   }
 
-  .featuresBox {
-    margin-top: 3rem;
+  .nutritionBox {
+    margin-bottom: 2rem;
+    align-items: center;
+    justify-content: center;
   }
 
   .price {

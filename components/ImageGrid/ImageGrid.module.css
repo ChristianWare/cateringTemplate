@@ -1,5 +1,5 @@
 .imgGrid {
-  height: 500px;
+  height: 450px;
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-gap: 2rem;
@@ -40,6 +40,7 @@
 .img {
   object-fit: cover;
   border-radius: 20px;
+  border: 2px solid var(--olive);
 }
 
 @media screen and (max-width: 968px) {

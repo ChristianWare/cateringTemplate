@@ -6,8 +6,7 @@ import { IRoom } from "../../backend/models/room";
 import BookingDatePicker from "../BookingDatePicker/BookingDatePicker";
 import ImageGrid from "../ImageGrid/ImageGrid";
 import GalleryGrid from "../GalleryGrid/GalleryGrid";
-import FalseButton from "../FalseButton/FalseButton";
-import Label from "../Label/Label";
+import HowItWorks from "../HowItWorks/HowItWorks";
 
 interface Props {
   data: {
@@ -45,20 +44,21 @@ const RoomDetails = ({ data }: Props) => {
     <>
       <LayoutWrapper>
         <div className={styles.top}>
-          <h1 className={styles.heading}>{room?.name}</h1>
-
+          <div>
+            <h1 className={styles.heading}>{room?.name}</h1>
+            <div className={styles.nutritionBox}>
+              {nutrition.map((x) => (
+                <div key={x.id} className={styles.nutrition}>
+                  <h6>
+                    {x.title}: {x.value}
+                  </h6>
+                </div>
+              ))}
+            </div>
+          </div>
           <div className={styles.price}>
             $ {room?.pricePerNight}{" "}
             <span className={styles.perNight}>/ per person</span>
-          </div>
-          <div className={styles.nutritionBox}>
-            {nutrition.map((x) => (
-              <div key={x.id} className={styles.nutrition}>
-                <h6>
-                  {x.title}: {x.value}
-                </h6>
-              </div>
-            ))}
           </div>
         </div>
         <ImageGrid images={room?.images} text={room?.category} />
@@ -73,9 +73,7 @@ const RoomDetails = ({ data }: Props) => {
         <br />
         <br />
         <GalleryGrid images={room?.images} />
-
-        <br />
-        <br />
+        <HowItWorks />
       </LayoutWrapper>
     </>
   );
