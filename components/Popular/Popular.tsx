@@ -4,13 +4,10 @@ import styles from "./Popular.module.css";
 import LayoutWrapper from "../LayoutWrapper";
 import Button from "../Button/Button";
 import Image from "next/image";
-import Img from "../../public/images/pizza2.png";
-import Img2 from "../../public/images/pizza.png";
-import Img3 from "../../public/images/buerger.png";
-import Img4 from "../../public/images/burger2.png";
+
 import { IRoom } from "../../backend/models/room";
-import PropPreviewii from "../PropPreviewii/PropPreviewii";
 import Label from "../Label/Label";
+import { usePathname } from "next/navigation";
 
 interface Props {
   data: {
@@ -21,46 +18,24 @@ interface Props {
   };
 }
 
-// const data = [
-//   {
-//     id: 1,
-//     title: "Pepperoni Feast Pizza",
-//     src: Img,
-//     price: "14.99",
-//   },
-//   {
-//     id: 2,
-//     title: "Margherita Pizza",
-//     src: Img2,
-//     price: "12.99",
-//   },
-//   {
-//     id: 3,
-//     title: "Smoky BBQ Bacon Burger",
-//     src: Img3,
-//     price: "10.99",
-//   },
-//   {
-//     id: 4,
-//     title: "Classic Cheeseburger",
-//     src: Img4,
-//     price: "8.99",
-//   },
-// ];
-
 const Popular = ({ data }: Props) => {
   const { rooms } = data;
-  console.log(rooms);
+
+  const pathname = usePathname(); // Get the current route
+
+  const displayedRooms = pathname === "/" ? rooms.slice(0, 3) : rooms;
 
   return (
     <section className={styles.parent}>
       <LayoutWrapper>
         <div className={styles.content}>
           <div className={styles.top}>
-            <h2 className={styles.heading}>Most Requested</h2>
+            {pathname !== "/menu" && (
+              <h2 className={styles.heading}>Most Requested</h2>
+            )}
           </div>
           <div className={styles.bottom}>
-            {rooms.map((x) => (
+            {displayedRooms.map((x) => (
               <div key={x.id} className={styles.card}>
                 <div className={styles.imgContainer}>
                   <Image
@@ -77,7 +52,7 @@ const Popular = ({ data }: Props) => {
                     <Label text={x.category} color='category' />
                   </div>
                 </div>
-                  <h3 className={styles.title}>{x.name}</h3>
+                <h3 className={styles.title}>{x.name}</h3>
                 <div className={styles.info}>
                   <p className={styles.price}>{x.description}</p>
                   <div className={styles.btnContainer}>
@@ -91,9 +66,15 @@ const Popular = ({ data }: Props) => {
               </div>
             ))}
           </div>
-          <div className={styles.btnContainerii}>
-            <Button btnType='primaryiii' text='See Entire Menu' href='/menu' />
-          </div>
+          {pathname !== "/menu" && (
+            <div className={styles.btnContainerii}>
+              <Button
+                btnType='primaryiii'
+                text='See Entire Menu'
+                href='/menu'
+              />
+            </div>
+          )}
         </div>
       </LayoutWrapper>
     </section>
