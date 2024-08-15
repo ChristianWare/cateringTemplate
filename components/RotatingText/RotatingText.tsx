@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import styles from "./RotatingText.module.css";
 import { FC } from "react";
+import Hamburger from "../../public/icons/hamburger.svg";
 
 interface RotatingTextProps {
   text: string;
@@ -11,7 +12,11 @@ interface RotatingTextProps {
   color?: string;
 }
 
-const RotatingText: FC<RotatingTextProps> = ({ text, color = "" }) => {
+const RotatingText: FC<RotatingTextProps> = ({
+  text,
+  color = "",
+  showEmoji,
+}) => {
   const [rotationAngle, setRotationAngle] = useState(0);
 
   useEffect(() => {
@@ -57,6 +62,15 @@ const RotatingText: FC<RotatingTextProps> = ({ text, color = "" }) => {
           </textPath>
         </text>
       </svg>
+      {showEmoji && (
+        <div className={styles.iconContainer}>
+          <Hamburger
+            className={`${styles.icon} ${styles[color]}`}
+            width={90}
+            height={90}
+          />
+        </div>
+      )}
     </div>
   );
 };

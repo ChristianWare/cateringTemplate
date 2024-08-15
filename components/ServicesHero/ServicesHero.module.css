@@ -56,6 +56,7 @@
 .img {
   object-fit: cover;
   border-radius: 20px;
+  border: 2px solid var(--olive);
 }
 
 @media screen and (max-width: 1068px) {

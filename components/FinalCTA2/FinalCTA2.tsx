@@ -52,7 +52,10 @@ const FinalCTA2 = () => {
               </div>
             </motion.div>
             <div className={styles.right}>
-              <RotatingText text='Catering • Catering • Catering • Catering • Catering • ' />
+              <RotatingText
+                text='Catering • Catering • Catering • Catering • Catering • '
+                showEmoji
+              />
             </div>
           </div>
         </div>
