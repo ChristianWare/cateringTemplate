@@ -3,6 +3,7 @@ import AboutSection from "../../components/AboutSection/AboutSection";
 import BlogSection from "../../components/BlogSection/BlogSection";
 import Faq from "../../components/Faq/Faq";
 import Galleryii from "../../components/Galleryii/Galleryii";
+import Mission from "../../components/Mission/Mission";
 import NewsLetter from "../../components/NewsLetter/NewsLetter";
 import OurMission from "../../components/OurMission/OurMission";
 import OurStory from "../../components/OurStory/OurStory";
@@ -15,6 +16,7 @@ export default function AboutPage() {
       <AboutSection />
       <OurStory />
       <OurMission />
+      <Mission />
       <Galleryii />
       <Testimonials />
       <Faq />
