@@ -258,7 +258,7 @@ select:focus {
   width: 80px;
   height: 80px;
   margin: 110px auto 0;
-  border: solid 6px var(--purple);
+  border: solid 6px var(--olive);
   border-radius: 50%;
   border-right-color: transparent;
   border-bottom-color: transparent;
@@ -635,7 +635,7 @@ select:focus {
   content: "";
   top: -8px;
   left: -6px;
-  background-color: var(--purple);
+  background-color: var(--olive);
   width: 30px;
   height: 30px;
   border-radius: 50%;

@@ -27,21 +27,21 @@ export interface IRoom extends Document {
   name: string;
   description: string;
   pricePerNight: number;
-  address: string;
-  googleMapsUrl: string;
-  location: ILocation;
-  guestCapacity: number;
-  numOfBeds: number;
+  // address: string;
+  // googleMapsUrl: string;
+  // location: ILocation;
+  // guestCapacity: number;
+  // numOfBeds: number;
   isInternet: boolean;
   isBreakfast: boolean;
   isAirConditioned: boolean;
   isPetsAllowed: boolean;
   isRoomCleaning: boolean;
-  ratings: number;
-  numOfReviews: number;
+  // ratings: number;
+  // numOfReviews: number;
   images: IImage[];
   category: string;
-  reviews: IReview[];
+  // reviews: IReview[];
   user: IUser;
   createdAt: Date;
 }
@@ -62,37 +62,37 @@ const roomSchema: Schema<IRoom> = new Schema({
     required: [true, "Please enter room price per night"],
     default: 0.0,
   },
-  address: {
-    type: String,
-    // required: [true, "Please enter room address"],
-  },
-  googleMapsUrl: {
-    type: String,
-    // required: [true, "Please enter Google Maps Url"],
-  },
-  location: {
-    type: {
-      type: String,
-      enum: ["Point"],
-    },
-    coordinates: {
-      type: [Number],
-      index: "2dsphere",
-    },
-    formattedAddress: String,
-    city: String,
-    state: String,
-    zipCode: String,
-    country: String,
-  },
-  guestCapacity: {
-    type: Number,
-    // required: [true, "Please enter room guest capacity"],
-  },
-  numOfBeds: {
-    type: Number,
-    // required: [true, "Please enter number of beds in room"],
-  },
+  // address: {
+  //   type: String,
+  //   required: [true, "Please enter room address"],
+  // },
+  // googleMapsUrl: {
+  //   type: String,
+  //   // required: [true, "Please enter Google Maps Url"],
+  // },
+  // location: {
+  //   type: {
+  //     type: String,
+  //     enum: ["Point"],
+  //   },
+  //   coordinates: {
+  //     type: [Number],
+  //     index: "2dsphere",
+  //   },
+  //   formattedAddress: String,
+  //   city: String,
+  //   state: String,
+  //   zipCode: String,
+  //   country: String,
+  // },
+  // guestCapacity: {
+  //   type: Number,
+  //   required: [true, "Please enter room guest capacity"],
+  // },
+  // numOfBeds: {
+  //   type: Number,
+  //   required: [true, "Please enter number of beds in room"],
+  // },
   isInternet: {
     type: Boolean,
     default: false,
@@ -113,14 +113,14 @@ const roomSchema: Schema<IRoom> = new Schema({
     type: Boolean,
     default: false,
   },
-  ratings: {
-    type: Number,
-    default: 0,
-  },
-  numOfReviews: {
-    type: Number,
-    default: 0,
-  },
+  // ratings: {
+  //   type: Number,
+  //   default: 0,
+  // },
+  // numOfReviews: {
+  //   type: Number,
+  //   default: 0,
+  // },
   images: [
     {
       public_id: {
@@ -142,23 +142,23 @@ const roomSchema: Schema<IRoom> = new Schema({
     },
   },
 
-  reviews: [
-    {
-      user: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "User",
-        required: true,
-      },
-      rating: {
-        type: Number,
-        required: true,
-      },
-      comment: {
-        type: String,
-        required: true,
-      },
-    },
-  ],
+  // reviews: [
+  //   {
+  //     user: {
+  //       type: mongoose.Schema.Types.ObjectId,
+  //       ref: "User",
+  //       required: true,
+  //     },
+  //     rating: {
+  //       type: Number,
+  //       required: true,
+  //     },
+  //     comment: {
+  //       type: String,
+  //       required: true,
+  //     },
+  //   },
+  // ],
   user: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "User",
@@ -171,27 +171,27 @@ const roomSchema: Schema<IRoom> = new Schema({
 });
 
 //  Setting up location:
-roomSchema.pre("save", async function (next) {
-  if (!this.isModified("location")) {
-    next();
-  }
+// roomSchema.pre("save", async function (next) {
+//   if (!this.isModified("location")) {
+//     next();
+//   }
 
-  const loc = await geoCoder.geocode(this.address);
+//   const loc = await geoCoder.geocode(this.address);
 
-  console.log("location", loc);
+//   console.log("location", loc);
 
-  this.location = {
-    type: "Point",
-    coordinates: [loc[0].longitude, loc[0].latitude],
-    formattedAddress: loc[0].formattedAddress,
-    city: loc[0].city,
-    state: loc[0].stateCode,
-    zipCode: loc[0].zipcode,
-    country: loc[0].countryCode,
-  };
+//   this.location = {
+//     type: "Point",
+//     coordinates: [loc[0].longitude, loc[0].latitude],
+//     formattedAddress: loc[0].formattedAddress,
+//     city: loc[0].city,
+//     state: loc[0].stateCode,
+//     zipCode: loc[0].zipcode,
+//     country: loc[0].countryCode,
+//   };
 
-  next();
-});
+//   next();
+// });
 
 export default mongoose.models.Room ||
   mongoose.model<IRoom>("Room", roomSchema);

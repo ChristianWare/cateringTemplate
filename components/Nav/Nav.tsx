@@ -132,11 +132,9 @@ const Nav: FC<Props> = ({ color = "", barColor = "" }) => {
               </Link>
             </li>
           ))}
-          {/* <div className={styles.iconBox}>
-            <Person className={styles.icon} />{" "}
-          </div> */}
+
           <div className={styles.btnContainer}>
-            <Button href='/' text='Start Your Order' btnType='navBtn' />
+            <Button href='/order' text='Start Your Order' btnType='navBtn' />
           </div>
         </ul>
         {isOpen && (
