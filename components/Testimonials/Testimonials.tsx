@@ -84,7 +84,6 @@ const reviews = [
   },
 ] as const;
 
-
 const Testimonials = () => {
   return (
     <section className={styles.container}>
@@ -95,10 +94,11 @@ const Testimonials = () => {
             <Hamburger className={styles.hamburger} />
             <h2 className={styles.heading}>What our clients say</h2>
             <p className={styles.copy}>
-              Read What Our Clients Have to Say About Their Journey with Us. We
-              use the latest technologies and tools to ensure that our solutions
-              are scalable, efficient, and secure. Our team follows agile
-              methodologies to deliver projects on time and on budget.
+              Discover What Our Clients Have to Say About Their Catering
+              Experience with Us. We use the freshest ingredients and latest
+              culinary techniques to ensure that every event is memorable,
+              delicious, and seamless. Our team is committed to delivering
+              exceptional service, on time and within budget.
             </p>
             <StarCluster color='tan' />
           </div>

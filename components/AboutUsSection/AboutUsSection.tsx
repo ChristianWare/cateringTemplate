@@ -27,7 +27,7 @@ const AboutUsSection = () => {
               unparalleled dining experiences right to your doorstep
             </p>
             <p className={styles.copy}>
-              At Tasty, we specialize in food, delivering unparalleled quality
+              We specialize in food, delivering unparalleled quality
               and innovation. Our commitment to excellence is evident in every
               dish we create, ensuring that we meet the unique needs and
               preferences of our customers.
