@@ -3,7 +3,6 @@
   z-index: 1;
 }
 
-
 .btn {
   text-align: center;
   font-size: 2.3rem;
@@ -25,10 +24,6 @@
   cursor: pointer;
 }
 
-/* .btn:active {
-  transform: translate(10px, 10px);
-} */
-
 .primary {
   color: var(--olive);
   background-color: var(--green);
@@ -48,9 +43,9 @@
 }
 
 .secondary {
-  color: var(--white);
-  background-color: var(--purple);
-  border: 2px solid var(--white);
+  color: var(--bgColor);
+  background-color: transparent;
+  border: 2px solid var(--bgColor);
 }
 
 .tertiary {

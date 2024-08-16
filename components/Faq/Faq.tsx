@@ -11,29 +11,30 @@ import Hamburger from "../../public/icons/hamburger.svg";
 const faqs = [
   {
     id: 36,
-    question: "Why should I use a direct booking website instead of Airbnb?",
+    question: "What types of events do you cater?",
     answer:
-      "Direct booking websites offer more control over your property, lower fees, and personalized branding. You have direct communication with guests and can build a loyal customer base.",
+      "We cater a wide range of events including weddings, corporate gatherings, parties, and more. Whether it's a small intimate gathering or a large event, we can accommodate your needs.",
   },
   {
     id: 36.1,
-    question: "How does the booking process work on a direct booking website?",
+    question: "How far in advance should I place my catering order?",
     answer:
-      "Guests can browse your property, view details, and make reservations directly through your website. You have the flexibility to set your own booking policies and payment processes.",
+      "We recommend placing your catering order at least two weeks in advance to ensure availability and adequate preparation time. However, we can accommodate last-minute requests depending on the size and scope of the event.",
   },
   {
     id: 36.2,
-    question: "What features can I customize on my direct booking website?",
+    question: "Can I customize the menu for my event?",
     answer:
-      "You can customize the website design, branding elements, property details, pricing, and policies. We offer flexibility to tailor the platform to your unique needs.",
+      "Absolutely! We offer customizable menus to fit your event’s theme and dietary needs. Whether you need vegetarian, vegan, gluten-free options, or a specific cuisine, we can tailor the menu to your preferences.",
   },
   {
     id: 36.3,
-    question: "Is it easy for guests to find my direct booking website?",
+    question: "Do you offer delivery and setup services?",
     answer:
-      "We implement SEO strategies to improve the visibility of your website on search engines. Additionally, we can assist with marketing strategies to drive traffic to your platform.",
+      "Yes, we provide delivery and setup services for all events. Our team ensures that everything is set up according to your specifications, so you can focus on enjoying your event.",
   },
 ] as const;
+
 
 const Faq = () => {
   const [selected, setSelected] = useState<null | number>(null);

@@ -91,20 +91,20 @@ const Footer = () => {
               <div className={styles.heading}>CONTACT INFO</div>
               <div className={styles.box}>
                 <Email width={20} height={20} className={styles.iconii} />
-                info@golfguise.com
+                info@gmail.com
               </div>
               <div className={styles.box}>
                 <Facebook width={20} height={20} className={styles.iconii} />
-                facebook.com/golfguise
+                facebook.com/catering
               </div>
               <div className={styles.box}>
                 <Twitter width={20} height={20} className={styles.iconii} />
-                twitter.com/golfguise
+                twitter.com/catering
               </div>
             </div>
           </div>
           <div className={styles.bottom}>
-            <div className={styles.logoii}>golf guise &#169; 2024</div>
+            <div className={styles.logoii}>Copyright &#169; 2024</div>
             <ul className={styles.disclosures}>
               <li className={styles.disc}>TERMS</li>
               <li className={styles.disc}>PRIVACY</li>

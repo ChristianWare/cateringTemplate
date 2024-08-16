@@ -81,10 +81,10 @@ const Nav: FC<Props> = ({ color = "", barColor = "" }) => {
       text: "Blog",
       href: "/blog",
     },
-    {
-      text: "My Account",
-      href: "/account",
-    },
+    // {
+    //   text: "My Account",
+    //   href: "/account",
+    // },
   ];
 
   return (
@@ -92,7 +92,7 @@ const Nav: FC<Props> = ({ color = "", barColor = "" }) => {
       <nav className={styles.navbar}>
         <div className={styles.logo}>
           <Link href='/' className={`${styles.logo} ${styles[color]}`}>
-            CWA
+            Chef Sam Perez
           </Link>
         </div>
         <ul

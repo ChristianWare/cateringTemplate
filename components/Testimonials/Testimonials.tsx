@@ -8,81 +8,82 @@ const reviews = [
   {
     id: 71,
     review:
-      "Fonts & Footers transformed our vacation rental business! Their direct booking website is sleek, user-friendly, and has significantly increased our bookings.",
+      "The catering service was exceptional! The food was delicious, and the presentation was top-notch. Our guests couldn't stop raving about it.",
     reviewer: "Jason W.",
     company: "Gilbert, AZ",
   },
   {
     id: 72,
     review:
-      "Working with Fonts & Footers was a game-changer for us. Their expertise in creating direct booking websites helped streamline our rental process and boost our revenue.",
+      "This catering team was a game-changer for our event. The menu was customized to perfection, and the service was seamless from start to finish.",
     reviewer: "Linda R.",
     company: "Mesa, AZ",
   },
   {
     id: 73,
     review:
-      "Impressed with the results! Fonts & Footers designed a custom booking platform that perfectly showcases our properties and has made managing bookings a breeze.",
+      "Impressed with the quality and service! The catering team delivered exactly what we needed, making our event a memorable one. Highly recommended!",
     reviewer: "Michael S.",
     company: "Chandler, AZ",
   },
   {
     id: 74,
     review:
-      "Fonts & Footers exceeded our expectations with our new direct booking website. It's professional, easy to navigate, and has improved our guests' booking experience.",
+      "The catering exceeded our expectations. The food was not only delicious but beautifully presented. The team was professional and attentive to all our needs.",
     reviewer: "Daniel P.",
     company: "Brooklyn, NY",
   },
   {
     id: 75,
     review:
-      "Highly recommend Fonts & Footers for anyone in the vacation rental industry. Their direct booking websites are top-notch, and the support team is fantastic.",
+      "Highly recommend this catering service for any event. The food was outstanding, and the staff went above and beyond to ensure everything was perfect.",
     reviewer: "Kirk U.",
     company: "Queens, NY",
   },
   {
     id: 76,
     review:
-      "Thanks to Fonts & Footers, we now have a modern, efficient direct booking website. Our guests love the seamless booking process, and so do we!",
+      "Thanks to this amazing catering service, our event was a huge success. The food was a hit with all our guests, and the service was impeccable.",
     reviewer: "Reggie R.",
-    company: "Houston, Tx",
+    company: "Houston, TX",
   },
   {
     id: 77,
     review:
-      "Fonts & Footers took our online presence to the next level. Our direct booking website is visually stunning and has helped us attract more guests than ever.",
+      "This catering team took our event to the next level. The food was incredible, and the service was flawless. We'll definitely be using them again!",
     reviewer: "Indar R.",
     company: "Los Angeles, CA",
   },
   {
     id: 78,
     review:
-      "Great experience working with Fonts & Footers. They tailored our direct booking website to our specific needs, and the results have been phenomenal.",
+      "Great experience working with this catering service. They customized the menu to our specific needs, and the results were phenomenal.",
     reviewer: "Lawrence S.",
-    company: "Portland, Or",
+    company: "Portland, OR",
   },
   {
     id: 79,
     review:
-      "Fonts & Footers' direct booking solution has simplified our business operations. It's user-friendly for both us and our guests, resulting in increased bookings.",
+      "The catering service simplified our event planning. The food was delicious, the service was excellent, and our guests were extremely satisfied.",
     reviewer: "Jared U.",
     company: "Trenton, NJ",
   },
   {
     id: 80,
     review:
-      "Impressive work from Fonts & Footers. Our new direct booking website is generating more leads and conversions, making our rental business more profitable.",
+      "Impressive work from this catering team. The food was a highlight of our event, and the service was professional and attentive.",
     reviewer: "William S.",
     company: "Sacramento, CA",
   },
   {
     id: 81,
     review:
-      "Fonts & Footers delivered exactly what we needed for our vacation rental business. Our direct booking website is professional, efficient, and has boosted our online presence.",
+      "This catering service delivered exactly what we needed for our event. The food was exceptional, and the staff was friendly and professional.",
     reviewer: "Chris N.",
     company: "Las Vegas, NV",
   },
 ] as const;
+
 
 const Testimonials = () => {
   return (

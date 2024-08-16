@@ -17,17 +17,17 @@
 }
 
 .heading {
-  color: var(--tan);
+  color: var(--bgColor);
 }
 
 .headingii {
   width: 75%;
-  color: var(--tan);
+  color: var(--bgColor);
   font-size: 3rem;
 }
 
 .copy {
-  color: var(--tan);
+  color: var(--bgColor);
 }
 
 .hamburger {

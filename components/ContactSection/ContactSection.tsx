@@ -13,10 +13,9 @@ const ContactSection = () => {
             Discover unforgettable catering experiences with us
           </h3>
           <p className={styles.copy}>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit
-            placeat voluptatibus, odio sit perferendis, impedit facere et
-            dolorum exercitationem quam in libero ipsam quibusdam nam iusto.
-            Deleniti labore autem eaque!
+            Reach out to us today to start planning your next event. Our team is
+            here to craft a personalized menu that will leave a lasting
+            impression on your guests.
           </p>
           <Hamburger className={styles.hamburger} />
         </div>

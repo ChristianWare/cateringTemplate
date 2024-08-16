@@ -25,11 +25,11 @@ const FinalCTA2 = () => {
             sizes='(max-width: 768px) 50vw, (max-width: 1200px) 100vw'
           />
           <div className={styles.content}>
-            <motion.div
-              variants={fadeIn("up", 0.3)}
-              initial='hidden'
-              whileInView={"show"}
-              viewport={{ once: false, amount: 0.3 }}
+            <div
+              // variants={fadeIn("up", 0.3)}
+              // initial='hidden'
+              // whileInView={"show"}
+              // viewport={{ once: false, amount: 0.3 }}
               className={styles.left}
             >
               <Label text='Chris Ware Agency' color='white' />
@@ -50,10 +50,10 @@ const FinalCTA2 = () => {
                   btnType='primary'
                 />
               </div>
-            </motion.div>
+            </div>
             <div className={styles.right}>
               <RotatingText
-                text='Catering • Catering • Catering • Catering • Catering • '
+                text='Caterer • Chef • Caterer • Chef • Caterer • Chef •'
                 showEmoji
               />
             </div>

@@ -3,7 +3,7 @@
 }
 
 .container {
-  border: 1px solid var(--black);
+  /* border: 1px solid var(--black); */
   border-radius: 20px;
   background-color: var(--olive);
   background-image: repeating-linear-gradient(
@@ -40,15 +40,14 @@
 
 .logo {
   font-size: 5rem;
-  font-family: var(--tuskerGrotesk);
-  color: var(--white);
+  color: var(--bgColor);
 }
 
 .copy {
   font-size: 1.3rem;
   width: 60%;
   margin-top: 1rem;
-  color: var(--white);
+  color: var(--bgColor);
 }
 
 .socials {
@@ -59,7 +58,7 @@
 }
 
 .socialContainer {
-  background-color: var(--white);
+  background-color: var(--bgColor);
   width: 30px;
   height: 30px;
   display: flex;
@@ -69,7 +68,7 @@
 }
 
 .icon {
-  color: var(--black);
+  color: var(--olive);
 }
 
 .links {
@@ -77,11 +76,11 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 0.5rem;
-  color: var(--white);
+  color: var(--bgColor);
 }
 
 .heading {
-  color: var(--white);
+  color: var(--bgColor);
   text-transform: uppercase;
   border-bottom: 1px solid var(--border);
   width: 90%;
@@ -105,12 +104,12 @@
   display: flex;
   align-items: center;
   gap: 1rem;
-  color: var(--white);
+  color: var(--bgColor);
   font-size: 1.2rem;
 }
 
 .iconii {
-  color: var(--white);
+  color: var(--bgColor);
 }
 
 .bottom {
@@ -120,7 +119,7 @@
 }
 
 .logoii {
-  color: var(--white);
+  color: var(--bgColor);
   font-size: 1.2rem;
 }
 
@@ -131,7 +130,7 @@
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  color: var(--white);
+  color: var(--bgColor);
   font-size: 1.2rem;
 }
 

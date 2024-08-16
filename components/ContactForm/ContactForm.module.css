@@ -44,11 +44,9 @@
 
 .featureText {
   font-weight: 600;
-  color: var(--purple);
 }
 
 .icon {
-  border: 3px solid var(--purple);
   border-radius: 50%;
   color: black;
 }
