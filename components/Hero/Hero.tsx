@@ -5,8 +5,8 @@ import LayoutWrapper from "../LayoutWrapper";
 import ContentPadding from "../ContentPadding/ContentPadding";
 import Button from "../Button/Button";
 import Label from "../Label/Label";
-import Img from "../../public/images/chefsam.png";
 import Image from "next/image";
+import Img from "../../public/images/cajun.jpg";
 import Nav from "../Nav/Nav";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../animation/variants";
@@ -37,7 +37,7 @@ const Hero = () => {
             >
               <Label text='Caterer / Chef' color='white' />
               <h1 className={styles.heading}>
-                Your <br /> favorites <br /> delivered
+                Your Intimate Affairs <br /> Personal Chef Services
               </h1>
               <p className={styles.copy}>
                 Deliciously crafted menus, tailored to your taste. From our

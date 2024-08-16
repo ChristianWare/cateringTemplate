@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import styles from "./RotatingText.module.css";
 import { FC } from "react";
-import Hamburger from "../../public/icons/hamburger.svg";
+import Hamburger from "../../public/icons/crab.svg";
 
 interface RotatingTextProps {
   text: string;

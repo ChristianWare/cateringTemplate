@@ -54,7 +54,7 @@ const FinalCTA2 = () => {
             <div className={styles.right}>
               <RotatingText
                 text='Caterer • Chef • Caterer • Chef • Caterer • Chef •'
-                showEmoji
+                // showEmoji
               />
             </div>
           </div>

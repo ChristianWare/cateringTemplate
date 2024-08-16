@@ -92,7 +92,7 @@ const Nav: FC<Props> = ({ color = "", barColor = "" }) => {
       <nav className={styles.navbar}>
         <div className={styles.logo}>
           <Link href='/' className={`${styles.logo} ${styles[color]}`}>
-            Chef Sam Perez
+            Personal Chef Services
           </Link>
         </div>
         <ul
