@@ -11,7 +11,7 @@ const AboutUsSection = () => {
           <div className={styles.left}>
             <h2 className={styles.heading}>About us</h2>
             <RotatingText
-              text='About Us • About Us • About Us • About Us • About Us • '
+              text='Live mas • Live mas • Live mas • Live mas • Live mas • Live mas •'
               color='olive'
             />
             {/* <div className={styles.iconContainer}>
@@ -27,10 +27,10 @@ const AboutUsSection = () => {
               unparalleled dining experiences right to your doorstep
             </p>
             <p className={styles.copy}>
-              We specialize in food, delivering unparalleled quality
-              and innovation. Our commitment to excellence is evident in every
-              dish we create, ensuring that we meet the unique needs and
-              preferences of our customers.
+              We specialize in food, delivering unparalleled quality and
+              innovation. Our commitment to excellence is evident in every dish
+              we create, ensuring that we meet the unique needs and preferences
+              of our customers.
             </p>
             <div className={styles.btnContainer}>
               <Button text='More About us' href='/about' btnType='primaryiii' />

@@ -1,10 +1,10 @@
 import LayoutWrapper from "../LayoutWrapper";
 import styles from "./HowItWorks.module.css";
 import Image from "next/image";
-import Img from "../../public/images/drink1.jpg";
-import Img2 from "../../public/images/drink2.png";
-import Img3 from "../../public/images/drink3.png";
-import Img4 from "../../public/images/drink4.png";
+import Img from "../../public/images/tacolove1.jpg";
+import Img2 from "../../public/images/tacolove2.jpg";
+import Img3 from "../../public/images/tacolove3.jpg";
+import Img4 from "../../public/images/tacolove4.jpg";
 
 const data = [
   {

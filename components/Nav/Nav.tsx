@@ -9,6 +9,7 @@ import Person from "../../../public/icons/person.svg";
 import { useAppDispatch, useAppSelector } from "../../redux/hooks";
 import { useSession } from "next-auth/react";
 import { setIsAuthenticated, setUser } from "../../redux/features/userSlice";
+import Bell from "../../public/icons/bell.svg";
 
 interface Props {
   color?: string;
@@ -81,10 +82,6 @@ const Nav: FC<Props> = ({ color = "", barColor = "" }) => {
       text: "Blog",
       href: "/blog",
     },
-    // {
-    //   text: "My Account",
-    //   href: "/account",
-    // },
   ];
 
   return (
@@ -92,7 +89,10 @@ const Nav: FC<Props> = ({ color = "", barColor = "" }) => {
       <nav className={styles.navbar}>
         <div className={styles.logo}>
           <Link href='/' className={`${styles.logo} ${styles[color]}`}>
-            Personal Chef Services
+            Taco Bell{" "}
+            <span className={styles.iconBox}>
+              <Bell className={styles.icon} />
+            </span>
           </Link>
         </div>
         <ul

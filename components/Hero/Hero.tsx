@@ -35,9 +35,9 @@ const Hero = () => {
               // viewport={{ once: false, amount: 0.3 }}
               className={styles.left}
             >
-              <Label text='Caterer / Chef' color='white' />
+              <Label text='Yo Quiero Taco Bell' color='white' />
               <h1 className={styles.heading}>
-                Your Intimate Affairs <br /> Personal Chef Services
+                Taco Bell: <br /> Live mas
               </h1>
               <p className={styles.copy}>
                 Deliciously crafted menus, tailored to your taste. From our
@@ -50,8 +50,7 @@ const Hero = () => {
             </div>
             <div className={styles.right}>
               <RotatingText
-                text='Caterer • Chef • Caterer • Chef • Caterer • Chef •'
-                // showEmoji
+                text='Live mas • Live mas • Live mas • Live mas • Live mas • Live mas •'
               />
             </div>
           </div>

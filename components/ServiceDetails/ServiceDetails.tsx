@@ -1,7 +1,7 @@
 import LayoutWrapper from "../LayoutWrapper";
 import styles from "./ServiceDetails.module.css";
 import Image from "next/image";
-import S1 from "../../public/images/service1.jpg";
+import S1 from "../../public/images/foodtruck.jpg";
 import S2 from "../../public/images/service2.jpg";
 import S3 from "../../public/images/service3.jpg";
 import Wedding from "../../public/icons/wedding.svg";
@@ -13,20 +13,20 @@ const data = [
   {
     id: 1,
     icon: <Wedding className={styles.icon} />,
-    title: "Weddings",
-    desc: "Make your special day unforgettable with our bespoke wedding catering services. We craft personalized menus that reflect your tastes and preferences, ensuring every detail is perfect for your big day.",
+    title: "Food Truck Catering",
+    desc: "Bring the excitement of street food to your event with our food truck catering services. We offer a diverse menu that can be customized to suit your event’s theme and your guests' preferences.",
     details: [
       {
         id: 1.1,
-        info: "Customizable menu options to suit all dietary requirements.",
+        info: "Customizable menu options to fit the theme of your event.",
       },
       {
         id: 1.2,
-        info: "Experienced staff to ensure seamless service throughout your event.",
+        info: "Experienced staff to serve your guests efficiently.",
       },
       {
         id: 1.3,
-        info: "Option for full-service catering including appetizers, entrees, and desserts.",
+        info: "Includes setup, service, and cleanup, so you can enjoy your event.",
       },
     ],
     src: S1,
@@ -74,6 +74,7 @@ const data = [
     src: S3,
   },
 ];
+
 
 const ServiceDetails = () => {
   return (
