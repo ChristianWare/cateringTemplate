@@ -1,6 +1,6 @@
 import ContactForm from "../ContactForm/ContactForm";
 import styles from "./ContactSection.module.css";
-import Hamburger from "../../public/icons/hamburger.svg";
+import Hamburger from "../../public/icons/taco.svg";
 
 
 const ContactSection = () => {

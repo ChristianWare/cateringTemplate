@@ -40,18 +40,17 @@ const Hero = () => {
                 Taco Bell: <br /> Live mas
               </h1>
               <p className={styles.copy}>
-                Deliciously crafted menus, tailored to your taste. From our
-                kitchen to your celebration, perfection on every plate.
+                Explore our diverse menu and indulge in tacos crafted with the
+                freshest ingredients and unique, mouthwatering flavors that keep
+                you coming back for more.
               </p>
               <div className={styles.btnContainer}>
-                <Button text='Contact us' href='/contact' btnType='primary' />
-                <Button text='View Menu' href='/contact' btnType='primaryii' />
+                <Button text='View Menu' href='/menu' btnType='primary' />
+                <Button text='Contact us' href='/contact' btnType='primaryii' />
               </div>
             </div>
             <div className={styles.right}>
-              <RotatingText
-                text='Live mas • Live mas • Live mas • Live mas • Live mas • Live mas •'
-              />
+              <RotatingText text='Live mas • Live mas • Live mas • Live mas • Live mas • Live mas •' />
             </div>
           </div>
         </ContentPadding>

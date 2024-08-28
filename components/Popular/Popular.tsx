@@ -21,7 +21,7 @@ interface Props {
 const Popular = ({ data }: Props) => {
   const { rooms } = data;
 
-  const pathname = usePathname(); // Get the current route
+  const pathname = usePathname();
 
   const displayedRooms = pathname === "/" ? rooms.slice(0, 3) : rooms;
 
@@ -31,7 +31,7 @@ const Popular = ({ data }: Props) => {
         <div className={styles.content}>
           <div className={styles.top}>
             {pathname !== "/menu" && (
-              <h2 className={styles.heading}>Most Requested</h2>
+              <h2 className={styles.heading}>What&apos;s Trending</h2>
             )}
           </div>
           <div className={styles.bottom}>

@@ -134,7 +134,7 @@ const Nav: FC<Props> = ({ color = "", barColor = "" }) => {
           ))}
 
           <div className={styles.btnContainer}>
-            <Button href='/order' text='Start Your Order' btnType='navBtn' />
+            <Button href='/order' text='We Cater !' btnType='navBtn' />
           </div>
         </ul>
         {isOpen && (

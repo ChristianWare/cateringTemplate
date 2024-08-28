@@ -31,6 +31,11 @@ const Usp = () => {
   return (
     <section className={styles.parent}>
       <LayoutWrapper>
+        <h2 className={styles.heading}>
+          Have an event?
+          <br />
+          We Cater!
+        </h2>
         <div className={styles.content}>
           <div className={styles.left}>
             <div className={styles.imgContainer}>

@@ -6,7 +6,7 @@ import LayoutWrapper from "../LayoutWrapper";
 import ContentPadding from "../ContentPadding/ContentPadding";
 import Arrow from "../../public/icons/downArrow.svg";
 import Label from "../Label/Label";
-import Hamburger from "../../public/icons/hamburger.svg";
+import Hamburger from "../../public/icons/taco.svg";
 
 const faqs = [
   {
@@ -35,7 +35,6 @@ const faqs = [
   },
 ] as const;
 
-
 const Faq = () => {
   const [selected, setSelected] = useState<null | number>(null);
 
@@ -53,7 +52,9 @@ const Faq = () => {
           <div className={styles.labelContainer}>
             <Label text="FAQ's" />
           </div>
-          <h2 className={styles.heading}>Your Catering <br /> Questions Answered</h2>
+          <h2 className={styles.heading}>
+            Your Taco Bell <br /> Questions Answered
+          </h2>
           <div className={styles.content}>
             <div className={styles.top}>
               <p className={styles.topText}>

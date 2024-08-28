@@ -20,7 +20,7 @@ const AboutUsSection = () => {
           </div>
           <div className={styles.right}>
             <h3 className={styles.subHeading}>
-              We&lsquo;re more than just a food service
+              We&lsquo;re more than just a fast food company...
             </h3>
             <p className={styles.copy}>
               We&lsquo;re a team of culinary enthusiasts dedicated to bringing
